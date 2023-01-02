@@ -43,7 +43,7 @@ class ProjectCard extends ConsumerWidget {
                 Text(
                   projectData.name.length <= 10
                       ? projectData.name
-                      : "${projectData.description.substring(0, 10)}...",
+                      : "${projectData.name.substring(0, 10)}...",
                   style: kSectionTitleText,
                   overflow: TextOverflow.ellipsis,
                 ),

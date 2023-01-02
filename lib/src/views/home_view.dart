@@ -27,6 +27,7 @@ class HomeView extends ConsumerWidget {
                 child: Text(
               appLocalizations.name,
               style: kTitleText,
+              textAlign: TextAlign.center
             )),
             space1(),
             Row(
