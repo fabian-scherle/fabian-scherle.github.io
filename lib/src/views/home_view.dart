@@ -5,7 +5,7 @@ import 'package:portfolio/config/data.dart';
 import 'package:portfolio/src/providers.dart';
 import 'package:portfolio/src/widgets/contact_button.dart';
 import 'package:portfolio/src/widgets/profile_image_container.dart';
-import 'package:portfolio/src/widgets/project_widget.dart';
+import 'package:portfolio/src/widgets/project_card.dart';
 import 'package:portfolio/src/widgets/resume_button.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -214,23 +214,25 @@ class HomeView extends ConsumerWidget {
                 child: screenSize.width > 1000
                     ? GridView.builder(
                         shrinkWrap: true,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 2, childAspectRatio: 3),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio:
+                                MediaQuery.of(context).size.width / 500),
                         itemCount: projectList.length,
                         itemBuilder: (BuildContext context, int index) {
-                          return ProjectWidget(
+                          return ProjectCard(
                             projectData: projectList[index],
                           );
                         })
                     : GridView.builder(
                         shrinkWrap: true,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 1, childAspectRatio: 2),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 1, 
+                            childAspectRatio:
+                                MediaQuery.of(context).size.width / 250),
                         itemCount: projectList.length,
                         itemBuilder: (BuildContext context, int index) {
-                          return ProjectWidget(
+                          return ProjectCard(
                             projectData: projectList[index],
                           );
                         }),
