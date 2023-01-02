@@ -13,12 +13,9 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.3.10'
-          - name: Build
         run: flutter pub get
       - name: Build
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.3.10'
-          - name: Build
         run: flutter build web --release --web-renderer html
-      
