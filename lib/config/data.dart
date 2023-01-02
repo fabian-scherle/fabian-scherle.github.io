@@ -17,7 +17,7 @@ String linkedinUrl = "https://www.linkedin.com/in/fabi%C3%A1n-scherle-carboneres
 
 List<Project> projectList = [
   Project(
-      name: "BalanceHomeApp/BalHom",
+      name: "BalHom/BalanceHomeApp",
       description:
           "Open source application for day-to-day expenses and revenues management.",
       imageUrl: "https://raw.githubusercontent.com/fabbo-repo/BalanceHomeApp/main/balance_home_app.png",

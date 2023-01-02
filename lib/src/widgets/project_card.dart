@@ -41,21 +41,21 @@ class ProjectCard extends ConsumerWidget {
                   width: 10,
                 ),
                 Text(
-                  projectData.name,
+                  projectData.name.length <= 10
+                      ? projectData.name
+                      : "${projectData.description.substring(0, 10)}...",
                   style: kSectionTitleText,
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
-            subtitle: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Text(
-                    projectData.description.length <= 203
-                        ? projectData.description
-                        : "${projectData.description.substring(0, 204)}...",
-                    overflow: TextOverflow.visible),
-              ),
+            subtitle: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
+                  projectData.description.length <= 203
+                      ? projectData.description
+                      : "${projectData.description.substring(0, 204)}...",
+                  overflow: TextOverflow.visible),
             ),
           ),
           const Spacer(),

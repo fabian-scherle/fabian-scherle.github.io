@@ -213,6 +213,7 @@ class HomeView extends ConsumerWidget {
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: screenSize.width > 1000
                     ? GridView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
@@ -225,9 +226,10 @@ class HomeView extends ConsumerWidget {
                           );
                         })
                     : GridView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 1, 
+                            crossAxisCount: 1,
                             childAspectRatio:
                                 MediaQuery.of(context).size.width / 250),
                         itemCount: projectList.length,
