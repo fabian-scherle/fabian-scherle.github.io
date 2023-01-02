@@ -72887,7 +72887,7 @@ return new A.d1(this.a.H6(a.gbX(a),this.b),s)},
 $S:468}
 A.MV.prototype={
 hx(a,b){var s=null
-return A.p4(B.Ex,A.a([A.dH(s,new A.fY(B.nr,s,s,new A.cG(B.oJ,new A.Fc(new A.q4("images/profile.jpg"),60,s),s),s),B.t,s,s,new A.dq(s,A.asu(B.nC,new A.q4("images/background.jpg"),s),s,s,s,s,B.aA),s,250,s,s,s,s,a.R(t.l).f.a.a),new A.Ho(new A.a7p(b),s)],t.p),B.bA,s,s)}}
+return A.p4(B.Ex,A.a([A.dH(s,new A.fY(B.nr,s,s,new A.cG(B.oJ,new A.Fc(new A.q4("assets/images/profile.jpg"),60,s),s),s),B.t,s,s,new A.dq(s,A.asu(B.nC,new A.q4("assets/images/background.jpg"),s),s,s,s,s,B.aA),s,250,s,s,s,s,a.R(t.l).f.a.a),new A.Ho(new A.a7p(b),s)],t.p),B.bA,s,s)}}
 A.a7p.prototype={
 $1(a){var s,r,q,p=$.nq(),o=p.z
 if(o===$){s=A.o(p)
