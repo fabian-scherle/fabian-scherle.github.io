@@ -4,7 +4,7 @@ on:
     branches: [ main ]
 jobs:
   build:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     name: Build and Push
     steps:
       - name: git-checkout
