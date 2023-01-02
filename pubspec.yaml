@@ -1,0 +1,65 @@
+name: portfolio
+description: Personal portafolio made with Flutter.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  google_fonts: ^3.0.1
+  # UI widgets
+  language_picker: ^0.4.1
+  # Flags images
+  flag: ^6.0.0
+  # Dependencies for internationalization with flutter:
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+  # Data class generator
+  build_runner: ^2.1.10
+  # Launch urls
+  url_launcher: ^6.1.4
+  # State management
+  flutter_riverpod: ^2.0.2
+  # Routing
+  go_router: ^6.0.0
+  # Launcher icons
+  flutter_launcher_icons: ^0.11.0
+  # Multiplatform IO package
+  universal_io: ^2.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  # Material Icons font is included with your application.
+  uses-material-design: true
+  # Flag to generate internationalization files
+  generate: true
+  assets:
+    - assets/images/
+
+# Icons setup: 
+flutter_icons:
+  android: true
+  image_path_android: 'assets/images/profile.jpg'
+  ios: true
+  image_path_ios: 'assets/images/profile.jpg'
+  remove_alpha_ios: true
+  web:
+    generate: true
+    image_path: "assets/images/profile.jpg"
+  windows:
+    generate: true
+    image_path: "assets/images/profile.jpg"
+    icon_size: 48 # min:48, max:256, default: 48

@@ -1,0 +1,30 @@
+{
+    "@_LANGUAGE_NAMES":{},
+    "english": "English",
+    "french": "French",
+    "spanish": "Spanish",
+    "unknown": "Unknown",
+    
+    "@_TITLE":{},
+    "appTitle": "Fabián Scherle",
+    
+    "@_APP_ERRORS":{},
+    "genericError": "Something went wrong, please try again later",
+    "pageNotFound": "Page not found",
+
+    "@_APP_TITLES":{},
+    "viewResume": "View Resume",
+    "name": "Fabián Scherle Carboneres",
+    "contact": "Contact",
+    "experience": "Experience",
+    "aboutMe": "About Me",
+    "location": "Location",
+    "phoneNumber": "Phone Number",
+    "email": "Email",
+    "linkedin": "Linkedin",
+    "viewProject": "View Project", 
+    
+    "@_APP_DESCRIPTIONS":{},
+    "aboutWorkExperience": "Full-Stack software developer with experiencie in Spirng, Django, Angular and Flutter frameworks. Junior Cloud SRE or Devops (AWS and GCP) with practice in deploying Flutter applications with services developed in python.",
+    "aboutMeSummary": "Fabián is a full-stack software developer, specialized in the field of machine learning and experienced with all stages of the development cycle for dynamic web projects. He has been involved in the development of applications with more than six programming languages making use of popular frameworks."
+}
