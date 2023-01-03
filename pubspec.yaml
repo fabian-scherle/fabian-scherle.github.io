@@ -35,6 +35,10 @@ dependencies:
   flutter_launcher_icons: ^0.11.0
   # Multiplatform IO package
   universal_io: ^2.0.4
+  # Pdf rendering
+  pdf: ^3.8.4
+  printing: ^5.9.3
+  video_player: ^2.4.10
 
 dev_dependencies:
   flutter_test:

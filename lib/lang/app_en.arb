@@ -5,9 +5,6 @@
     "spanish": "Spanish",
     "unknown": "Unknown",
     
-    "@_TITLE":{},
-    "appTitle": "Fabián Scherle",
-    
     "@_APP_ERRORS":{},
     "genericError": "Something went wrong, please try again later",
     "pageNotFound": "Page not found",
@@ -25,6 +22,63 @@
     "viewProject": "View Project", 
     
     "@_APP_DESCRIPTIONS":{},
+    "currentLocation": "Valencia, Spain",
     "aboutWorkExperience": "Full-Stack software developer with experiencie in Spirng, Django, Angular and Flutter frameworks. Junior Cloud SRE or Devops (AWS and GCP) with practice in deploying Flutter applications with services developed in python.",
-    "aboutMeSummary": "Fabián is a full-stack software developer, specialized in the field of machine learning and experienced with all stages of the development cycle for dynamic web projects. He has been involved in the development of applications with more than six programming languages making use of popular frameworks."
+    "aboutMeSummary": "Full-Stack software developer, specialized in the field of machine learning and experienced with all stages of the development cycle for dynamic web projects. Involved in the development of applications with more than six programming languages making use of popular frameworks.",
+    
+    "@_PDF_RESUME":{},
+    "resumeRole": "Full Stack Software Developer",
+    "resumeReview": "Full stack software engineer, lifelong learner and competent at addressing problems. \nSpecialized in the field of machine learning and experienced with all stages of the \ndevelopment cycle for dynamic web projects.",
+    "resumeEducation": "EDUCATION",
+    "resumeDetails": "Details",
+    "resumeExperience": "WORK EXPERIENCE",
+    "resumeAchievementsTasks": "Achievements/Tasks",
+    "resumeLanguage": "LANGUAGE",
+    "native": "Native",
+    "resumeSkills": "SKILLS",
+    
+    "@_PDF_DATA":{},
+    "educationTitle1": "Computer Science Enineering",
+    "educationPlace1": "Polytechnic University of Valencia",
+    "educationDateFrom1": "Sep 2018",
+    "educationDateTo1": "Jul 2022",
+    "educationDetails11": "Operating systems fundamentals.",
+    "educationDetails12": "Different programming languages \nknowledge and applications.",
+    "educationDetails13": "Software development fundamentals.",
+    "educationDetails14": "Algorithms, smart systems and machine \nlearning models fundamentals .",
+
+    "educationTitle2": "Professional Training",
+    "educationPlace2": "coursera.org",
+    "educationDateFrom2": "Mar 2022",
+    "educationDateTo2": "Present",
+    "educationDetails21": "Bash scripting and Linux fundamentals.",
+    "educationDetails22": "Django and DRF framework for web \naplications development.",
+    "educationDetails23": "Google Cloud Platform fundamentals.",
+    "educationDetails24": "Amazon Web Services fundamentals.",
+    "educationDetails25": "Devops and SRE fundamentals.",
+
+    "experienceTitle1": "Software developer as intern",
+    "experiencePlace1": "Dialapplet",
+    "experienceDateFrom1": "May 2021",
+    "experienceDateTo1": "Oct 2021",
+    "experienceTasks11": "Used technologies investigation in \nthe Call Center field.",
+    "experienceTasks12": "Development and maintenance of \nsoftware developed in C++ with PostgreSQL \ndatabase.",
+    
+    "experienceTitle2": "Private tutoring",
+    "experiencePlace2": "tusclasesparticulares.com",
+    "experienceDateFrom2": "Feb 2021",
+    "experienceDateTo2": "Dec 2022",
+    "experienceTasks21": "Projects developed in Java, Ansi C \nand Python.",
+
+    "experienceTitle3": "Software developer",
+    "experiencePlace3": "Capgemini",
+    "experienceDateFrom3": "Feb 2022",
+    "experienceDateTo3": "Present",
+    "experienceTasks31": "Development of backend applications \nwith Spring/Java, Django/Python \nand Actix/Rust frameworks.",
+    "experienceTasks32": "Development of frontend applications \nwith Flutter framework.",
+    "experienceTasks33": "Deployments and scripting for Firebase \nand Google Cloud environments.",
+
+    "skillCommunication": "Communication",
+    "skillLeadership": "Leadership",
+    "skillEmpathy": "Empathy"
 }

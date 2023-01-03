@@ -80,7 +80,7 @@ class HomeView extends ConsumerWidget {
                                               ),
                                               space2(),
                                               Text(
-                                                location,
+                                                appLocalizations.currentLocation,
                                                 overflow: TextOverflow.ellipsis,
                                               )
                                             ],
@@ -162,7 +162,7 @@ class HomeView extends ConsumerWidget {
                                             ),
                                             space2(),
                                             Text(
-                                              location,
+                                              appLocalizations.currentLocation,
                                               overflow: TextOverflow.ellipsis,
                                             )
                                           ],

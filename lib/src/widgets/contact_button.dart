@@ -16,7 +16,7 @@ class ContactButton extends ConsumerWidget {
           //Call to launch email
           final Uri emailLaunchUri = Uri(
             scheme: 'mailto',
-            path: contactEmail,
+            path: email,
           );
           await launchUrl(emailLaunchUri);
         },

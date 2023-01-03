@@ -7,10 +7,7 @@ String imagePath = "assets/images/profile.jpg";
 String resumeLink =
     "https://mega.nz/folder/1rxmzKAB#gseZdwMEK2JBH9WdYoUMfg";
 
-//Contact Email
-String contactEmail = "fabianscherle99@gmail.com";
-
-String location = "Valencia, Spain";
+String fullName = "Fabián Scherle Carboneres";
 String phoneNumber = "+34 677 16 96 87";
 String email = "fabianscherle99@gmail.com";
 String linkedinUrl = "https://www.linkedin.com/in/fabi%C3%A1n-scherle-carboneres-5ba3831b5/";
