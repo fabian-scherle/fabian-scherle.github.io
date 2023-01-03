@@ -1,6 +1,6 @@
 import 'package:portfolio/src/models/project_model.dart';
 
-String backgroundImagePath = "assets/images/background.jpg";
+String backgroundImagePath = "assets/images/number_rain.gif";
 String imagePath = "assets/images/profile.jpg";
 
 //Link to resume
