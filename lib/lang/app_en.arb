@@ -23,12 +23,11 @@
     
     "@_APP_DESCRIPTIONS":{},
     "currentLocation": "Valencia, Spain",
-    "aboutWorkExperience": "Full-Stack software developer with experiencie in Spirng, Django, Angular and Flutter frameworks. Junior Cloud SRE or Devops (AWS and GCP) with practice in deploying Flutter applications with services developed in python.",
-    "aboutMeSummary": "Full-Stack software developer, specialized in the field of machine learning and experienced with all stages of the development cycle for dynamic web projects. Involved in the development of applications with more than six programming languages making use of popular frameworks.",
+    "aboutMeSummary": "Full-stack developer with experience in developing web applications using multiple frameworks such as Angular, Django, Flutter and Spring. Proficient in cloud technologies such as AWS and GCP. \n\nExperienced in the complete web application development cycle from design to deployment. Passionate about learning new technologies and addressing problems. Skilled in machine learning algorithms and data analysis.",
     
     "@_PDF_RESUME":{},
     "resumeRole": "Full Stack Software Developer",
-    "resumeReview": "Full stack software engineer, lifelong learner and competent at addressing problems. \nSpecialized in the field of machine learning and experienced with all stages of the \ndevelopment cycle for dynamic web projects.",
+    "resumeReview": "Full-stack developer. Proficient in cloud technologies such as AWS and GCP. Experienced in the complete web application development cycle from design to deployment. Passionate about learning new technologies and addressing problems.",
     "resumeEducation": "EDUCATION",
     "resumeDetails": "Details",
     "resumeExperience": "WORK EXPERIENCE",

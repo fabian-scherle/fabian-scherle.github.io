@@ -12,6 +12,19 @@ class ProfileSection extends pw.StatelessWidget {
 
   @override
   pw.Widget build(pw.Context context) {
+    String resumeReview = "";
+    final List<String> resumeReviewWords = appLocalizations.resumeReview.split(" ");
+    int lines = 1;
+    for (String element in resumeReviewWords) {
+      if ("$resumeReview $element".length >= 89 * lines) {
+        lines++;
+        if (lines >= 4) break;
+        resumeReview += "\n$element ";
+      } else {
+        resumeReview += "$element ";
+      }
+    }
+
     return pw.Container(
         constraints: const pw.BoxConstraints.expand(height: 130),
         color: PdfColors.blueGrey,
@@ -45,9 +58,8 @@ class ProfileSection extends pw.StatelessWidget {
                             fontSize: 13)),
                     margin: const pw.EdgeInsets.fromLTRB(15, 5, 0, 0)),
                 pw.Container(
-                    // No more than 3 lines with 70 characters each lines
-                    child: pw.Text(
-                        appLocalizations.resumeReview,
+                    // No more than 3 lines with 89 characters each lines
+                    child: pw.Text(resumeReview,
                         style: const pw.TextStyle(
                             color: PdfColors.white, fontSize: 10)),
                     margin: const pw.EdgeInsets.fromLTRB(5, 7, 0, 0)),

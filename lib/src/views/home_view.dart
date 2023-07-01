@@ -23,12 +23,10 @@ class HomeView extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const ProfileImageContainer(),
+            space1(),
             Center(
-                child: Text(
-              appLocalizations.name,
-              style: kTitleText,
-              textAlign: TextAlign.center
-            )),
+                child: Text(appLocalizations.name,
+                    style: kTitleText, textAlign: TextAlign.center)),
             space1(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -47,13 +45,10 @@ class HomeView extends ConsumerWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                experienceTitle(appLocalizations),
-                                space1(),
-                                Text(appLocalizations.aboutWorkExperience),
-                                const Divider(),
                                 aboutMeTitle(appLocalizations),
                                 space1(),
                                 Text(appLocalizations.aboutMeSummary),
+                                space1(),
                               ],
                             ),
                           ),
@@ -80,7 +75,8 @@ class HomeView extends ConsumerWidget {
                                               ),
                                               space2(),
                                               Text(
-                                                appLocalizations.currentLocation,
+                                                appLocalizations
+                                                    .currentLocation,
                                                 overflow: TextOverflow.ellipsis,
                                               )
                                             ],
@@ -132,13 +128,10 @@ class HomeView extends ConsumerWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              experienceTitle(appLocalizations),
-                              space1(),
-                              Text(appLocalizations.aboutWorkExperience),
-                              const Divider(),
                               aboutMeTitle(appLocalizations),
                               space1(),
                               Text(appLocalizations.aboutMeSummary),
+                              space1(),
                             ],
                           ),
                           Column(
@@ -256,13 +249,6 @@ class HomeView extends ConsumerWidget {
   Widget space2() {
     return const SizedBox(
       width: 5,
-    );
-  }
-
-  Text experienceTitle(AppLocalizations appLocalizations) {
-    return Text(
-      appLocalizations.experience,
-      style: kSectionTitleText,
     );
   }
 
