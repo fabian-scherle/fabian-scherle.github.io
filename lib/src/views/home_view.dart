@@ -15,7 +15,7 @@ class HomeView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var screenSize = MediaQuery.of(context).size;
+    final screenSize = MediaQuery.of(context).size;
     final appLocalizations = ref.watch(appLocalizationsProvider);
     return Scaffold(
       body: SingleChildScrollView(

@@ -20,6 +20,11 @@ List<Project> projectList = [
       imageUrl: "https://raw.githubusercontent.com/fabbo-repo/BalanceHomeApp/main/balance_home_app.png",
       link: "https://github.com/fabbo-repo/BalanceHomeApp"),
   Project(
+      name: "Currency Conversion API",
+      description: "Currency Conversion API provides a convenient way to obtain currency conversion rates and historical conversion data for multiple currencies.",
+      imageUrl: "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png",
+      link: "https://github.com/fabbo-repo/currency-conversion-api"),
+  Project(
       name: "Wayat",
       description:
           "Demonstrator/MVP on how to use Flutter, Python (both devonfw incubators) and Google Cloud.",

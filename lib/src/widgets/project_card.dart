@@ -13,8 +13,11 @@ class ProjectCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final appLocalizations = ref.watch(appLocalizationsProvider);
+    final screenSize = MediaQuery.of(context).size;
+    final cardWidth = screenSize.width > 1000
+        ? screenSize.width * 0.2
+        : screenSize.width * 0.4;
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.4,
       height: 120,
       child: Card(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -22,7 +25,8 @@ class ProjectCard extends ConsumerWidget {
             leading: Image.network(projectData.imageUrl,
                 width: 60,
                 height: 60,
-                fit: BoxFit.cover, loadingBuilder: (BuildContext context,
+                filterQuality: FilterQuality.medium,
+                fit: BoxFit.contain, loadingBuilder: (BuildContext context,
                     Widget child, ImageChunkEvent? loadingProgress) {
               if (loadingProgress == null) return child;
               return const CircularProgressIndicator();
@@ -40,12 +44,13 @@ class ProjectCard extends ConsumerWidget {
                 const SizedBox(
                   width: 10,
                 ),
-                Text(
-                  projectData.name.length <= 10
-                      ? projectData.name
-                      : "${projectData.name.substring(0, 10)}...",
-                  style: kSectionTitleText,
-                  overflow: TextOverflow.ellipsis,
+                SizedBox(
+                  width: cardWidth,
+                  child: Text(
+                    projectData.name,
+                    style: kSectionTitleText,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
               ],
             ),
