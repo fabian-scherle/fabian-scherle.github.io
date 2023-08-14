@@ -6,7 +6,7 @@ import 'package:portfolio/src/views/home_view.dart';
 final router = GoRouter(
     errorBuilder: (context, state) {
       if (state.error.toString().contains("no routes")) {
-        return ErrorView(location: state.location);
+        return ErrorView(location: state.matchedLocation);
       }
       debugPrint(state.error.toString());
       return const ErrorView(location: '/${ErrorView.routePath}');
