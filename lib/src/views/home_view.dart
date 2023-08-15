@@ -5,9 +5,10 @@ import 'package:portfolio/config/data.dart';
 import 'package:portfolio/src/providers.dart';
 import 'package:portfolio/src/widgets/contact_button.dart';
 import 'package:portfolio/src/widgets/profile_image_container.dart';
-import 'package:portfolio/src/widgets/project_card.dart';
+import 'package:portfolio/src/widgets/projects_section_widget.dart';
 import 'package:portfolio/src/widgets/resume_button.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:portfolio/src/widgets/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeView extends ConsumerWidget {
@@ -23,16 +24,20 @@ class HomeView extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const ProfileImageContainer(),
-            space1(),
+            spaceHeight10(),
             Center(
                 child: Text(appLocalizations.name,
                     style: kTitleText, textAlign: TextAlign.center)),
-            space1(),
+            spaceHeight10(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [const ResumeButton(), space2(), const ContactButton()],
+              children: [
+                const ResumeButton(),
+                spaceWidth5(),
+                const ContactButton()
+              ],
             ),
-            space1(),
+            spaceHeight10(),
             Center(
               child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.8,
@@ -46,9 +51,9 @@ class HomeView extends ConsumerWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 aboutMeTitle(appLocalizations),
-                                space1(),
+                                spaceHeight10(),
                                 Text(appLocalizations.aboutMeSummary),
-                                space1(),
+                                spaceHeight10(),
                               ],
                             ),
                           ),
@@ -66,14 +71,14 @@ class HomeView extends ConsumerWidget {
                                             CrossAxisAlignment.start,
                                         children: [
                                           locationTitle(appLocalizations),
-                                          space1(),
+                                          spaceHeight10(),
                                           Row(
                                             children: [
                                               const Icon(
                                                 Icons.circle,
                                                 size: 16,
                                               ),
-                                              space2(),
+                                              spaceWidth5(),
                                               Text(
                                                 appLocalizations
                                                     .currentLocation,
@@ -81,26 +86,26 @@ class HomeView extends ConsumerWidget {
                                               )
                                             ],
                                           ),
-                                          space1(),
+                                          spaceHeight10(),
                                           phoneNumberTitle(appLocalizations),
-                                          space1(),
+                                          spaceHeight10(),
                                           Text(
                                             phoneNumber,
                                             overflow: TextOverflow.ellipsis,
                                           ),
-                                          space1(),
+                                          spaceHeight10(),
                                           emailTitle(appLocalizations),
-                                          space1(),
+                                          spaceHeight10(),
                                           Text(
                                             email,
                                             overflow: TextOverflow.ellipsis,
                                           ),
-                                          space1(),
+                                          spaceHeight10(),
                                           Row(
                                             children: [
                                               linkedinUrlTitle(
                                                   appLocalizations),
-                                              space2(),
+                                              spaceWidth5(),
                                               IconButton(
                                                   onPressed: () async {
                                                     final Uri uri = Uri.parse(
@@ -114,7 +119,7 @@ class HomeView extends ConsumerWidget {
                                                   ))
                                             ],
                                           ),
-                                          space1(),
+                                          spaceHeight10(),
                                         ]),
                                   ),
                                 )
@@ -129,9 +134,9 @@ class HomeView extends ConsumerWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               aboutMeTitle(appLocalizations),
-                              space1(),
+                              spaceHeight10(),
                               Text(appLocalizations.aboutMeSummary),
-                              space1(),
+                              spaceHeight10(),
                             ],
                           ),
                           Column(
@@ -146,39 +151,39 @@ class HomeView extends ConsumerWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         locationTitle(appLocalizations),
-                                        space1(),
+                                        spaceHeight10(),
                                         Row(
                                           children: [
                                             const Icon(
                                               Icons.circle,
                                               size: 16,
                                             ),
-                                            space2(),
+                                            spaceWidth5(),
                                             Text(
                                               appLocalizations.currentLocation,
                                               overflow: TextOverflow.ellipsis,
                                             )
                                           ],
                                         ),
-                                        space1(),
+                                        spaceHeight10(),
                                         phoneNumberTitle(appLocalizations),
-                                        space1(),
+                                        spaceHeight10(),
                                         Text(
                                           phoneNumber,
                                           overflow: TextOverflow.ellipsis,
                                         ),
-                                        space1(),
+                                        spaceHeight10(),
                                         emailTitle(appLocalizations),
-                                        space1(),
+                                        spaceHeight10(),
                                         Text(
                                           email,
                                           overflow: TextOverflow.ellipsis,
                                         ),
-                                        space1(),
+                                        spaceHeight10(),
                                         Row(
                                           children: [
                                             linkedinUrlTitle(appLocalizations),
-                                            space2(),
+                                            spaceWidth5(),
                                             IconButton(
                                                 onPressed: () async {
                                                   final Uri uri = Uri.parse(
@@ -192,7 +197,7 @@ class HomeView extends ConsumerWidget {
                                                 ))
                                           ],
                                         ),
-                                        space1(),
+                                        spaceHeight10(),
                                       ]),
                                 ),
                               )
@@ -202,53 +207,11 @@ class HomeView extends ConsumerWidget {
                       ),
               ),
             ),
-            Center(
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.8,
-                child: screenSize.width > 1000
-                    ? GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            childAspectRatio:
-                                MediaQuery.of(context).size.width / 500),
-                        itemCount: projectList.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return ProjectCard(
-                            projectData: projectList[index],
-                          );
-                        })
-                    : GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 1,
-                            childAspectRatio:
-                                MediaQuery.of(context).size.width / 250),
-                        itemCount: projectList.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return ProjectCard(
-                            projectData: projectList[index],
-                          );
-                        }),
-              ),
-            ),
+            const ProjectsSectionWidget(),
+            spaceHeight10()
           ],
         ),
       ),
-    );
-  }
-
-  Widget space1() {
-    return const SizedBox(
-      height: 10,
-    );
-  }
-
-  Widget space2() {
-    return const SizedBox(
-      width: 5,
     );
   }
 

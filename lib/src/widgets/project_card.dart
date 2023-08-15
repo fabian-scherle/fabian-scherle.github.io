@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:portfolio/config/constants.dart';
 import 'package:portfolio/src/models/project_model.dart';
 import 'package:portfolio/src/providers.dart';
+import 'package:portfolio/src/widgets/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends ConsumerWidget {
@@ -15,53 +16,46 @@ class ProjectCard extends ConsumerWidget {
     final appLocalizations = ref.watch(appLocalizationsProvider);
     final screenSize = MediaQuery.of(context).size;
     final cardWidth = screenSize.width > 1000
-        ? screenSize.width * 0.2
-        : screenSize.width * 0.4;
+        ? screenSize.width * 0.39
+        : screenSize.width * 0.77;
     return SizedBox(
-      height: 120,
+      width: cardWidth,
+      height: 170,
       child: Card(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          ListTile(
-            leading: Image.network(projectData.imageUrl,
-                width: 60,
-                height: 60,
-                filterQuality: FilterQuality.medium,
-                fit: BoxFit.contain, loadingBuilder: (BuildContext context,
-                    Widget child, ImageChunkEvent? loadingProgress) {
-              if (loadingProgress == null) return child;
-              return const CircularProgressIndicator();
-            }, errorBuilder: (_, o, ___) {
-              debugPrint(o.toString());
-              return const Icon(Icons.image);
-            }),
-            title: Row(
-              children: [
-                Icon(
-                  Icons.build,
-                  color: kGrey,
-                  size: 18,
-                ),
-                const SizedBox(
-                  width: 10,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              iconImage(),
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                spaceHeight10(),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.build,
+                      color: kGrey,
+                      size: 18,
+                    ),
+                    spaceWidth10(),
+                    SizedBox(
+                      width: cardWidth - 120,
+                      child: Text(
+                        projectData.name,
+                        style: kSectionTitleText,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
-                  width: cardWidth,
-                  child: Text(
-                    projectData.name,
-                    style: kSectionTitleText,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ],
-            ),
-            subtitle: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Text(
-                  projectData.description.length <= 203
-                      ? projectData.description
-                      : "${projectData.description.substring(0, 204)}...",
-                  overflow: TextOverflow.visible),
-            ),
+                  width: cardWidth - 120,
+                  child: Text(projectData.description,
+                      textAlign: TextAlign.start,
+                      maxLines: 4,
+                      overflow: TextOverflow.visible),
+                )
+              ])
+            ],
           ),
           const Spacer(),
           const Divider(),
@@ -85,5 +79,22 @@ class ProjectCard extends ConsumerWidget {
         ]),
       ),
     );
+  }
+
+  Widget iconImage() {
+    return Padding(
+        padding: const EdgeInsets.all(10),
+        child: Image.network(projectData.imageUrl,
+            width: 60,
+            height: 60,
+            filterQuality: FilterQuality.medium,
+            fit: BoxFit.contain, loadingBuilder: (BuildContext context,
+                Widget child, ImageChunkEvent? loadingProgress) {
+          if (loadingProgress == null) return child;
+          return const CircularProgressIndicator();
+        }, errorBuilder: (_, o, ___) {
+          debugPrint(o.toString());
+          return const Icon(Icons.image);
+        }));
   }
 }
