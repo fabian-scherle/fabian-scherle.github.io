@@ -30,6 +30,19 @@ class ExperienceModel {
       required this.tasks});
 }
 
+class CertificationModel {
+  final String title;
+  final String url;
+  final String dateFrom;
+  final String dateTo;
+
+  CertificationModel(
+      {required this.title,
+      required this.url,
+      required this.dateFrom,
+      required this.dateTo});
+}
+
 List<EducationModel> getEducationList(AppLocalizations appLocalizations) {
   return [
     EducationModel(
@@ -55,6 +68,27 @@ List<EducationModel> getEducationList(AppLocalizations appLocalizations) {
           appLocalizations.educationDetails24,
           appLocalizations.educationDetails25
         ]),
+    EducationModel(
+        title: "",
+        place: appLocalizations.educationPlace3,
+        dateFrom: appLocalizations.educationDateFrom3,
+        dateTo: appLocalizations.educationDateTo3,
+        details: [
+          appLocalizations.educationDetails31,
+          appLocalizations.educationDetails32,
+        ]),
+  ];
+}
+
+List<CertificationModel> getCertificationsList(
+    AppLocalizations appLocalizations) {
+  return [
+    CertificationModel(
+      title: appLocalizations.certificationTitle1,
+      url: "https://www.credential.net/\ne96b7cf2-a1c1-4476-91c2-8fdba17131a0",
+      dateFrom: appLocalizations.certificationDateFrom1,
+      dateTo: appLocalizations.certificationDateTo1,
+    )
   ];
 }
 
@@ -74,9 +108,7 @@ List<ExperienceModel> getExperienceList(AppLocalizations appLocalizations) {
         place: appLocalizations.experiencePlace2,
         dateFrom: appLocalizations.experienceDateFrom2,
         dateTo: appLocalizations.experienceDateTo2,
-        tasks: [
-          appLocalizations.experienceTasks21
-        ]),
+        tasks: [appLocalizations.experienceTasks21]),
     ExperienceModel(
         title: appLocalizations.experienceTitle3,
         place: appLocalizations.experiencePlace3,
@@ -85,7 +117,8 @@ List<ExperienceModel> getExperienceList(AppLocalizations appLocalizations) {
         tasks: [
           appLocalizations.experienceTasks31,
           appLocalizations.experienceTasks32,
-          appLocalizations.experienceTasks33
+          appLocalizations.experienceTasks33,
+          appLocalizations.experienceTasks34
         ]),
   ];
 }
@@ -104,22 +137,29 @@ List<String> getSkillsList(AppLocalizations appLocalizations) {
     appLocalizations.skillLeadership,
     appLocalizations.skillEmpathy,
     "Docker",
+    "Kubernetes",
     "Python",
     "Django/DRF",
     "Java",
-    "SpringBoot",
+    "Spring",
     "Rust",
     "Actix",
     "GCP",
+    "Firebase",
     "AWS",
     "Linux",
     "Ansi C",
     "C++",
-    "Flutter",
     "Dart",
+    "Flutter",
     "CSS",
     "HTML",
     "TypeScript",
-    "Angular"
+    "Angular",
+    "Scrum",
+    "Agile",
+    "Git",
+    "Gitlab",
+    "Github"
   ];
 }

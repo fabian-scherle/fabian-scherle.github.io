@@ -15,7 +15,7 @@ class LanguagesSection extends pw.StatelessWidget {
         crossAxisAlignment: pw.CrossAxisAlignment.start,
         children: [
           pw.Container(
-              margin: const pw.EdgeInsets.only(top: 20, left: 20),
+              margin: const pw.EdgeInsets.only(top: 40, left: 20),
               child: pw.Text(appLocalizations.resumeLanguage,
                   style: resumeTitleText)),
           getLanguagesWidget(appLocalizations)

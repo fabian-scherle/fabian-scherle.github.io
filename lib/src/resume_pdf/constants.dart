@@ -27,3 +27,6 @@ pw.TextStyle resumeNormalText =
 
 pw.TextStyle resumeSectionText = pw.TextStyle(
     color: PdfColors.blueGrey400, fontSize: 11, fontStyle: pw.FontStyle.italic);
+
+pw.TextStyle urlText = const pw.TextStyle(
+    color: PdfColors.blue300, fontSize: 10);

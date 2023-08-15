@@ -30,11 +30,12 @@
     "resumeReview": "Full-stack developer. Proficient in cloud technologies such as AWS and GCP. Experienced in the complete web application development cycle from design to deployment. Passionate about learning new technologies and addressing problems.",
     "resumeEducation": "EDUCATION",
     "resumeDetails": "Details",
-    "resumeExperience": "WORK EXPERIENCE",
+    "resumeExperience": "EXPERIENCE",
     "resumeAchievementsTasks": "Achievements/Tasks",
     "resumeLanguage": "LANGUAGE",
     "native": "Native",
     "resumeSkills": "SKILLS",
+    "resumeCertifications": "CERTIFICATIONS",
     
     "@_PDF_DATA":{},
     "educationTitle1": "Computer Science Enineering",
@@ -47,14 +48,20 @@
     "educationDetails14": "Algorithms, smart systems and machine \nlearning models fundamentals .",
 
     "educationTitle2": "Professional Training",
-    "educationPlace2": "coursera.org",
+    "educationPlace2": "Coursera",
     "educationDateFrom2": "Mar 2022",
-    "educationDateTo2": "Present",
+    "educationDateTo2": "Dec 2022",
     "educationDetails21": "Bash scripting and Linux fundamentals.",
     "educationDetails22": "Django and DRF framework for web \naplications development.",
     "educationDetails23": "Google Cloud Platform fundamentals.",
     "educationDetails24": "Amazon Web Services fundamentals.",
     "educationDetails25": "Devops and SRE fundamentals.",
+
+    "educationPlace3": "Udemy",
+    "educationDateFrom3": "Jan 2023",
+    "educationDateTo3": "Present",
+    "educationDetails31": "Master Spring 6, Spring Boot 3, \nREST, JPA, Hibernate.",
+    "educationDetails32": "OSINT: Open-Source Intelligence.",
 
     "experienceTitle1": "Software developer as intern",
     "experiencePlace1": "Dialapplet",
@@ -76,7 +83,12 @@
     "experienceTasks31": "Development of backend applications \nwith Spring/Java, Django/Python \nand Actix/Rust frameworks.",
     "experienceTasks32": "Development of frontend applications \nwith Flutter framework.",
     "experienceTasks33": "Deployments and scripting for Firebase \nand Google Cloud environments.",
+    "experienceTasks34": "Team and technology leader in Spring \nprojects.",
 
+    "certificationTitle1": "Google Cloud Digital Leader",
+    "certificationDateFrom1": "Mar 2023",
+    "certificationDateTo1": "Mar 2026",
+    
     "skillCommunication": "Communication",
     "skillLeadership": "Leadership",
     "skillEmpathy": "Empathy"

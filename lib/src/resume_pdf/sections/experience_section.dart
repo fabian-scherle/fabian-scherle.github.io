@@ -15,7 +15,7 @@ class ExperienceSection extends pw.StatelessWidget {
         crossAxisAlignment: pw.CrossAxisAlignment.start,
         children: [
           pw.Container(
-              margin: const pw.EdgeInsets.only(top: 20, left: 20),
+              margin: const pw.EdgeInsets.only(top: 30, left: 20),
               child: pw.Text(appLocalizations.resumeExperience,
                   style: resumeTitleText)),
           getExperienceWidget(appLocalizations)
@@ -26,20 +26,23 @@ class ExperienceSection extends pw.StatelessWidget {
     return pw.Column(
         mainAxisAlignment: pw.MainAxisAlignment.start,
         crossAxisAlignment: pw.CrossAxisAlignment.start,
-        children: getExperienceList(appLocalizations).map((e) {
+        children: getExperienceList(appLocalizations).map((experience) {
           return pw.Column(
               mainAxisAlignment: pw.MainAxisAlignment.start,
               crossAxisAlignment: pw.CrossAxisAlignment.start,
               children: [
                 pw.Container(
-                    margin: const pw.EdgeInsets.only(top: 8, left: 20),
-                    child: pw.Text(e.title, style: resumeSubtitleText)),
+                    margin: const pw.EdgeInsets.only(top: 12, left: 20),
+                    child:
+                        pw.Text(experience.title, style: resumeSubtitleText)),
                 pw.Container(
                     margin: const pw.EdgeInsets.only(top: 1, left: 20),
-                    child: pw.Text(e.place, style: resumeSndSubtitleText)),
+                    child: pw.Text(experience.place,
+                        style: resumeSndSubtitleText)),
                 pw.Container(
                     margin: const pw.EdgeInsets.only(top: 3, left: 20),
-                    child: pw.Text("${e.dateFrom} - ${e.dateTo}",
+                    child: pw.Text(
+                        "${experience.dateFrom} - ${experience.dateTo}",
                         style: resumeSectionText)),
                 pw.Container(
                     margin: const pw.EdgeInsets.only(top: 5, left: 20),
@@ -47,7 +50,7 @@ class ExperienceSection extends pw.StatelessWidget {
                         style: resumeSectionText)),
                 pw.Container(
                     margin: const pw.EdgeInsets.only(top: 2, left: 20),
-                    child: getDetails(e.tasks)),
+                    child: getDetails(experience.tasks)),
               ]);
         }).toList());
   }
@@ -58,20 +61,22 @@ class ExperienceSection extends pw.StatelessWidget {
         mainAxisAlignment: pw.MainAxisAlignment.start,
         crossAxisAlignment: pw.CrossAxisAlignment.start,
         children: details
-            .map((e) => pw.Row(children: [
-                  pw.Container(
-                    width: 5,
-                    height: 5,
-                    margin: const pw.EdgeInsets.only(top: 4, right: 2),
-                    decoration: const pw.BoxDecoration(
-                      color: resumeTitleColor,
-                      shape: pw.BoxShape.circle,
-                    ),
-                  ),
-                  pw.Container(
-                      margin: const pw.EdgeInsets.only(top: 5),
-                      child: pw.Text(e, style: resumeNormalText))
-                ]))
+            .map((e) => pw.Row(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Container(
+                        width: 5,
+                        height: 5,
+                        margin: const pw.EdgeInsets.only(top: 12, right: 4),
+                        decoration: const pw.BoxDecoration(
+                          color: resumeTitleColor,
+                          shape: pw.BoxShape.circle,
+                        ),
+                      ),
+                      pw.Container(
+                          margin: const pw.EdgeInsets.only(top: 5),
+                          child: pw.Text(e, style: resumeNormalText))
+                    ]))
             .toList());
   }
 }

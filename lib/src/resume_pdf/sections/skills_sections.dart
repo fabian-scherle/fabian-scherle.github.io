@@ -16,7 +16,7 @@ class SkillsSection extends pw.StatelessWidget {
         crossAxisAlignment: pw.CrossAxisAlignment.start,
         children: [
           pw.Container(
-              margin: const pw.EdgeInsets.only(top: 20, left: 20),
+              margin: const pw.EdgeInsets.only(top: 30, left: 20),
               child: pw.Text(appLocalizations.resumeSkills,
                   style: resumeTitleText)),
           getSkillsWidget(appLocalizations)

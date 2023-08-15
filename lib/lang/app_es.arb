@@ -33,11 +33,12 @@
     "resumeReview": "Desarrollador full-stack. Competente en tecnologías de la nube como AWS y GCP. Experimentado en el ciclo completo de desarrollo de aplicaciones web. Apasionado por el aprendizaje de nuevas tecnologías y el abordaje de problemas.",
     "resumeEducation": "FORMACIÓN PROFESIONAL",
     "resumeDetails": "Detalles",
-    "resumeExperience": "EXPERIENCIA LABORAL",
+    "resumeExperience": "EXPERIENCIA",
     "resumeAchievementsTasks": "Logros/Tareas",
     "resumeLanguage": "IDIOMA",
     "native": "Nativo",
     "resumeSkills": "SKILLS",
+    "resumeCertifications": "CERTIFICATIONS",
 
     "@_PDF_DATA":{},
     "educationTitle1": "Ingeniería Informática",
@@ -50,14 +51,20 @@
     "educationDetails14": "Fundamentos de algoritmos, sistemas \ninteligentes y modelos de aprendizaje \nautomático.",
     
     "educationTitle2": "Formación Profesional",
-    "educationPlace2": "coursera.org",
+    "educationPlace2": "Coursera",
     "educationDateFrom2": "Mar 2022",
-    "educationDateTo2": "Presente",
+    "educationDateTo2": "Dic 2022",
     "educationDetails21": "Bash scripting y fundamentos de \nlinux.",
     "educationDetails22": "Django y DRF framework para el \ndesarrollo de aplicaciones web.",
     "educationDetails23": "Fundamentos de Google Cloud Platform.",
     "educationDetails24": "Fundamentos de Amazon Web Services.",
     "educationDetails25": "Fundamentos de Devops y SRE.",
+
+    "educationPlace3": "Udemy",
+    "educationDateFrom3": "Ene 2023",
+    "educationDateTo3": "Presente",
+    "educationDetails31": "Master Spring 6, Spring Boot 3, \nREST, JPA, Hibernate.",
+    "educationDetails32": "OSINT: Inteligencia de código \nabierto.",
     
     "experienceTitle1": "Becario desarrollador de software",
     "experiencePlace1": "Dialapplet",
@@ -79,6 +86,11 @@
     "experienceTasks31": "Desarrollo de aplicaciones backend \ncon frameworks Spring/Java, \nDjango/Python y Actix/Rust.",
     "experienceTasks32": "Desarrollo de aplicaciones frontend \ncon framework Flutter.",
     "experienceTasks33": "Despliegues y scripting para entornos \nde Firebase y Google Cloud.",
+    "experienceTasks34": "Lider de equipo y tecnología en \nproyectos de Spring.",
+
+    "certificationTitle1": "Google Cloud Digital Leader",
+    "certificationDateFrom1": "Mar 2023",
+    "certificationDateTo1": "Mar 2026",
 
     "skillCommunication": "Comunicación",
     "skillLeadership": "Liderazgo",
