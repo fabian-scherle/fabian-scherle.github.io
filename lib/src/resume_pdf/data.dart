@@ -125,7 +125,7 @@ List<ExperienceModel> getExperienceList(AppLocalizations appLocalizations) {
 
 Map<String, String> getLanuagesList(AppLocalizations appLocalizations) {
   return {
-    appLocalizations.english: "B1",
+    appLocalizations.english: "B2",
     appLocalizations.french: "A2",
     appLocalizations.spanish: appLocalizations.native
   };
