@@ -1,10 +1,8 @@
 import 'package:pdf/widgets.dart' as pw;
-import 'package:portfolio/src/resume_pdf/sections/certifications_section.dart';
 import 'package:portfolio/src/resume_pdf/sections/contact_section.dart';
+import 'package:portfolio/src/resume_pdf/sections/education_section.dart';
 import 'package:portfolio/src/resume_pdf/sections/experience_section.dart';
-import 'package:portfolio/src/resume_pdf/sections/languages_section.dart';
 import 'package:portfolio/src/resume_pdf/sections/profile_section.dart';
-import 'package:portfolio/src/resume_pdf/sections/skills_sections.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FirstPage extends pw.StatelessWidget {
@@ -27,9 +25,7 @@ class FirstPage extends pw.StatelessWidget {
                 mainAxisAlignment: pw.MainAxisAlignment.start,
                 crossAxisAlignment: pw.CrossAxisAlignment.start,
                 children: [
-                  LanguagesSection(appLocalizations: appLocalizations),
-                  CertificationsSection(appLocalizations: appLocalizations),
-                  SkillsSection(appLocalizations: appLocalizations),
+                  EducationSection(appLocalizations: appLocalizations),
                 ]),
             pw.SizedBox(width: 30),
             pw.Column(

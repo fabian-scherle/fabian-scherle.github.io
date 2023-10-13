@@ -85,7 +85,7 @@ List<CertificationModel> getCertificationsList(
   return [
     CertificationModel(
       title: appLocalizations.certificationTitle1,
-      url: "https://www.credential.net/\ne96b7cf2-a1c1-4476-91c2-8fdba17131a0",
+      url: "https://www.credential.net/e96b7cf2-a1c1-4476-91c2-8fdba17131a0",
       dateFrom: appLocalizations.certificationDateFrom1,
       dateTo: appLocalizations.certificationDateTo1,
     )
@@ -104,12 +104,6 @@ List<ExperienceModel> getExperienceList(AppLocalizations appLocalizations) {
           appLocalizations.experienceTasks12
         ]),
     ExperienceModel(
-        title: appLocalizations.experienceTitle2,
-        place: appLocalizations.experiencePlace2,
-        dateFrom: appLocalizations.experienceDateFrom2,
-        dateTo: appLocalizations.experienceDateTo2,
-        tasks: [appLocalizations.experienceTasks21]),
-    ExperienceModel(
         title: appLocalizations.experienceTitle3,
         place: appLocalizations.experiencePlace3,
         dateFrom: appLocalizations.experienceDateFrom3,
@@ -120,6 +114,12 @@ List<ExperienceModel> getExperienceList(AppLocalizations appLocalizations) {
           appLocalizations.experienceTasks33,
           appLocalizations.experienceTasks34
         ]),
+    ExperienceModel(
+        title: appLocalizations.experienceTitle2,
+        place: appLocalizations.experiencePlace2,
+        dateFrom: appLocalizations.experienceDateFrom2,
+        dateTo: appLocalizations.experienceDateTo2,
+        tasks: [appLocalizations.experienceTasks21]),
   ];
 }
 
@@ -140,24 +140,17 @@ List<String> getSkillsList(AppLocalizations appLocalizations) {
     "Kubernetes",
     "Python",
     "Django/DRF",
-    "Java",
-    "Spring",
-    "Rust",
-    "Actix",
+    "Java/Spring",
+    "Rust/Actix",
     "GCP",
     "Firebase",
     "AWS",
-    "Linux",
     "Ansi C",
     "C++",
     "Dart",
     "Flutter",
-    "CSS",
-    "HTML",
-    "TypeScript",
     "Angular",
     "Scrum",
-    "Agile",
     "Git",
     "Gitlab",
     "Github"
