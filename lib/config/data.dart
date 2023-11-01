@@ -14,11 +14,11 @@ String linkedinUrl = "https://www.linkedin.com/in/fabi%C3%A1n-scherle-carboneres
 
 List<Project> projectList = [
   Project(
-      name: "BalHom/BalanceHomeApp",
+      name: "BalHom",
       description:
           "Open source application for day-to-day expenses and revenues management.",
-      imageUrl: "https://raw.githubusercontent.com/fabbo-repo/BalanceHomeApp/main/balance_home_app.png",
-      link: "https://github.com/fabbo-repo/BalanceHomeApp"),
+      imageUrl: "https://github.com/balhom/.github/blob/main/balance_home_app.png",
+      link: "https://github.com/balhom"),
   Project(
       name: "Currency Conversion API",
       description: "Currency Conversion API provides a convenient way to obtain currency conversion rates and historical conversion data for multiple currencies.",
