@@ -17,7 +17,7 @@ List<Project> projectList = [
       name: "BalHom",
       description:
           "Open source application for day-to-day expenses and revenues management.",
-      imageUrl: "https://github.com/balhom/.github/blob/main/balance_home_app.png",
+      imageUrl: "https://raw.githubusercontent.com/balhom/.github/main/balance_home_app.png",
       link: "https://github.com/balhom"),
   Project(
       name: "Currency Conversion API",
