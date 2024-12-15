@@ -9,7 +9,7 @@ export const PhotoSection: React.FC = () => {
   const { t, i18n } = useTranslation();
 
   const getCVPath = () => {
-    return `/cv/cv_${i18n.language}.pdf`;
+    return `/cv/cv_${i18n.language.substring(0, 2)}.pdf`;
   };
 
   return (
