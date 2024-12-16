@@ -4,6 +4,7 @@ import { Button } from '../../ui/button/button';
 import { Container } from '../../ui/container/container';
 import { Section } from '../../ui/section/section';
 import './photo-section.css';
+import { Linkedin } from 'lucide-react';
 
 export const PhotoSection: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -26,7 +27,18 @@ export const PhotoSection: React.FC = () => {
           <div className="profile-info">
             <h2 className="profile-title">{t('photo.greeting')}</h2>
             <p className="profile-description">{t('photo.description')}</p>
-            <Button href={getCVPath()} icon>{t('photo.downloadCV')}</Button>
+            <div className="profile-actions">
+              <Button href={getCVPath()} icon>{t('photo.downloadCV')}</Button>
+              <a 
+                href="https://www.linkedin.com/in/fabián-scherle-carboneres-5ba3831b5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <Linkedin className="social-icon" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
         </div>
       </Container>
