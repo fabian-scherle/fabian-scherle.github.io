@@ -5,12 +5,21 @@ import { Container } from '../../ui/container/container';
 import { Section } from '../../ui/section/section';
 import './photo-section.css';
 import { Linkedin } from 'lucide-react';
+import { useAnalyticsEventTracker } from '../../../hooks/use-analytics-event-tracker';
 
 export const PhotoSection: React.FC = () => {
   const { t, i18n } = useTranslation();
 
+  const gaEventTracker = useAnalyticsEventTracker("Photo Section");
+
   const getCVPath = () => {
+    gaEventTracker("Download CV", i18n.language.substring(0, 2));
+
     return `/cv/cv_${i18n.language.substring(0, 2)}.pdf`;
+  };
+
+  const goToLinkedin = () => {
+    gaEventTracker("Linkedin", "");
   };
 
   return (
@@ -29,11 +38,12 @@ export const PhotoSection: React.FC = () => {
             <p className="profile-description">{t('photo.description')}</p>
             <div className="profile-actions">
               <Button href={getCVPath()} icon>{t('photo.downloadCV')}</Button>
-              <a 
+              <a
                 href="https://www.linkedin.com/in/fabián-scherle-carboneres-5ba3831b5/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
+                onClick={goToLinkedin}
               >
                 <Linkedin className="social-icon" />
                 <span>LinkedIn</span>

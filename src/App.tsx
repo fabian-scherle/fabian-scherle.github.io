@@ -4,6 +4,10 @@ import { IndexLayout } from './components/layout/index-layout/index-layout';
 import { PhotoSection } from './components/sections/photo-section/photo-section';
 import { AboutSection } from './components/sections/about-section/about-section';
 import { ProjectsSection } from './components/sections/projects-section/projects-section';
+import ReactGA from 'react-ga';
+
+const TRACKING_ID = "G-8N02HG2VX1";
+ReactGA.initialize(TRACKING_ID);
 
 function App(): React.ReactElement {
   useMeta({

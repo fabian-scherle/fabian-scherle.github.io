@@ -6,9 +6,16 @@ import { Section } from '../../ui/section/section';
 import { Heading } from '../../ui/heading/heading';
 import { projects } from '../../../constants/projects';
 import './projects-section.css';
+import { useAnalyticsEventTracker } from '../../../hooks/use-analytics-event-tracker';
 
 export const ProjectsSection: React.FC = () => {
   const { t } = useTranslation();
+
+  const gaEventTracker = useAnalyticsEventTracker("Photo Section");
+
+  const goToProject = (projectId: string) => {
+    gaEventTracker("Visit Project", projectId);
+  };
 
   return (
     <Section id="projects" className="projects-section">
@@ -36,6 +43,7 @@ export const ProjectsSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link"
+                  onClick={() => goToProject(project.id)}
                 >
                   {t('projects.viewProject')}
                   <ExternalLink className="project-link-icon" />
