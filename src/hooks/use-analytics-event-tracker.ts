@@ -1,8 +1,12 @@
-import ReactGA from "react-ga4";
+import { logEvent } from "firebase/analytics";
+import { firebaseAnalytics } from "../config/firebase";
 
 export const useAnalyticsEventTracker = (category: string) => {
     const eventTracker = (action: string, label: string) => {
-        ReactGA.event({ category, action, label });
+        logEvent(firebaseAnalytics, category, {
+            action: action,
+            label: label,
+        });
     }
     return eventTracker;
 }
