@@ -6,15 +6,13 @@ import { Section } from '../../ui/section/section';
 import { Heading } from '../../ui/heading/heading';
 import { projects } from '../../../constants/projects';
 import './projects-section.css';
-import { useAnalyticsEventTracker } from '../../../hooks/use-analytics-event-tracker';
+import { logFirebaseAnalyticsEvent } from '../../../utils/firebase-analytics-utils';
 
 export const ProjectsSection: React.FC = () => {
   const { t } = useTranslation();
 
-  const gaEventTracker = useAnalyticsEventTracker("Photo Section");
-
   const goToProject = (projectId: string) => {
-    gaEventTracker("Visit Project", projectId);
+    logFirebaseAnalyticsEvent("go-project-" + projectId);
   };
 
   return (

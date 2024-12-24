@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { getMetaTitle, getMetaDescription } from '../utils/seo';
+import { getMetaTitle, getMetaDescription } from '../utils/seo-utils';
 
 interface UseMetaProps {
   title?: string;
