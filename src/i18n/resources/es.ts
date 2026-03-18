@@ -34,6 +34,11 @@ export const es = {
       title: "Mis Proyectos",
       viewProject: "Ver Proyecto",
       items: {
+        copeo: {
+          title: "Copeo",
+          description:
+            'COPEO es la app social imprescindible para backpackers recién llegados a Australia, diseñada para convertir un "acabo de llegar" en un "ya tengo con quién salir", gracias a planes y personas reales.',
+        },
         balhom: {
           title: "BalHom",
           description:

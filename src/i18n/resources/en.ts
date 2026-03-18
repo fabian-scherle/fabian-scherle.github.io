@@ -34,6 +34,11 @@ export const en = {
       title: "My Projects",
       viewProject: "View Project",
       items: {
+        copeo: {
+          title: "Copeo",
+          description:
+            'COPEO is the go-to social app for backpackers new to Australia designed to turn "just arrived" into "just connected" through real plans and authentic people.',
+        },
         balhom: {
           title: "BalHom",
           description:

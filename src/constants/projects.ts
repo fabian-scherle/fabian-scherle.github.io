@@ -1,5 +1,12 @@
 export const projects = [
   {
+    id: "copeo",
+    title: "Copeo",
+    image:
+      "https://avatars.githubusercontent.com/u/145842066?s=400&u=8df7484b1798223b9be02fe403e7d8f37458ba81&v=4",
+    link: "https://copeoapp.com/",
+  },
+  {
     id: "balhom",
     title: "BalHom",
     image:
