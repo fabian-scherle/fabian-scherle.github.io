@@ -1,11 +1,11 @@
-import React from 'react';
-import { Download } from 'lucide-react';
-import './button.css';
+import React from "react";
+import { Download } from "lucide-react";
+import "./button.css";
 
 interface ButtonProps {
   href?: string;
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
   icon?: boolean;
   className?: string;
 }
@@ -13,9 +13,9 @@ interface ButtonProps {
 export const Button: React.FC<ButtonProps> = ({
   href,
   children,
-  variant = 'primary',
+  variant = "primary",
   icon = false,
-  className = ''
+  className = "",
 }: ButtonProps) => {
   const classes = `button button-${variant} ${className}`;
   const content = (
@@ -33,9 +33,5 @@ export const Button: React.FC<ButtonProps> = ({
     );
   }
 
-  return (
-    <button className={classes}>
-      {content}
-    </button>
-  );
+  return <button className={classes}>{content}</button>;
 };

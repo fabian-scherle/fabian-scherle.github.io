@@ -1,22 +1,29 @@
-import React, { useState } from 'react';
-import { Menu } from 'lucide-react';
-import { Container } from '../../ui/container/container';
-import { LanguageSwitcher } from '../../ui/language-switcher/language-switcher';
-import { NavLinksLayout } from '../nav-links-layout/nav-links-layout';
-import { MobileMenu } from '../../ui/mobile-menu/mobile-menu';
-import { useScrollLock } from '../../../hooks/use-scroll-lock';
-import './header-layout.css';
+import React, { useState, useEffect } from "react";
+import { Menu } from "lucide-react";
+import { Container } from "../../ui/container/container";
+import { LanguageSwitcher } from "../../ui/language-switcher/language-switcher";
+import { NavLinksLayout } from "../nav-links-layout/nav-links-layout";
+import { MobileMenu } from "../../ui/mobile-menu/mobile-menu";
+import { useScrollLock } from "../../../hooks/use-scroll-lock";
+import "./header-layout.css";
 
 export const HeaderLayout: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   useScrollLock(isMobileMenuOpen);
 
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header${isScrolled ? " header--scrolled" : ""}`}>
       <Container>
         <nav className="header-nav">
           <div className="header-content">
-            <h1 className="header-title"></h1>
+            <h1 className="header-title">Fabián Scherle</h1>
             <div className="header-links">
               <NavLinksLayout />
               <LanguageSwitcher />

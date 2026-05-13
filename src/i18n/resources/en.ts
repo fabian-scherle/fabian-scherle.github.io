@@ -64,7 +64,7 @@ export const en = {
             "Packaging of documentation and tools needed to create a top-down DevOps (pre-made) environment.",
         },
         openshs: {
-          title: "OpenSHS Inprovment",
+          title: "OpenSHS Improvement",
           description:
             "New interaction mechanisms for Open Smart Home Simulator to generate simulated data in an easy way.",
         },

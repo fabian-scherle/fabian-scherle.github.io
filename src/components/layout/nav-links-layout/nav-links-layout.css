@@ -8,8 +8,35 @@
   color: var(--color-gray-600);
   text-decoration: none;
   transition: color 0.2s;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: 1px;
+  transition: width 0.25s ease;
 }
 
 .nav-link:hover {
   color: var(--color-gray-900);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link--active {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.nav-link--active::after {
+  width: 100%;
 }

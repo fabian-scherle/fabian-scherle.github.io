@@ -3,16 +3,17 @@ import { useTranslation } from "react-i18next";
 import { Button } from "../../ui/button/button";
 import { Container } from "../../ui/container/container";
 import { Section } from "../../ui/section/section";
+import { useInView } from "../../../hooks/use-in-view";
 import "./photo-section.css";
 import { Linkedin } from "lucide-react";
 import { logFirebaseAnalyticsEvent } from "../../../utils/firebase-analytics-utils";
 
 export const PhotoSection: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const { ref, inView } = useInView();
 
   const getCVPath = () => {
     logFirebaseAnalyticsEvent("download-cv-" + i18n.language.substring(0, 2));
-
     return `/cv/cv_${i18n.language.substring(0, 2)}.pdf`;
   };
 
@@ -23,7 +24,10 @@ export const PhotoSection: React.FC = () => {
   return (
     <Section id="photo" className="photo-section">
       <Container>
-        <div className="photo-content">
+        <div
+          ref={ref as React.RefObject<HTMLDivElement>}
+          className={`photo-content fade-in-up${inView ? " visible" : ""}`}
+        >
           <div className="profile-image-container">
             <img
               src="/images/profile.webp"

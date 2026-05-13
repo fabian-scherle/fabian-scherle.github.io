@@ -1,9 +1,22 @@
+.heading-wrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
 .heading {
   font-size: 1.5rem;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 3rem;
   color: var(--color-gray-900);
+  display: inline-block;
+}
+
+.heading-accent {
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  margin: 0.5rem auto 0;
 }
 
 @media (min-width: 768px) {

@@ -1,15 +1,17 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { ExternalLink } from 'lucide-react';
-import { Container } from '../../ui/container/container';
-import { Section } from '../../ui/section/section';
-import { Heading } from '../../ui/heading/heading';
-import { projects } from '../../../constants/projects';
-import './projects-section.css';
-import { logFirebaseAnalyticsEvent } from '../../../utils/firebase-analytics-utils';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { ExternalLink } from "lucide-react";
+import { Container } from "../../ui/container/container";
+import { Section } from "../../ui/section/section";
+import { Heading } from "../../ui/heading/heading";
+import { projects } from "../../../constants/projects";
+import { useInView } from "../../../hooks/use-in-view";
+import "./projects-section.css";
+import { logFirebaseAnalyticsEvent } from "../../../utils/firebase-analytics-utils";
 
 export const ProjectsSection: React.FC = () => {
   const { t } = useTranslation();
+  const { ref, inView } = useInView();
 
   const goToProject = (projectId: string) => {
     logFirebaseAnalyticsEvent("go-project-" + projectId);
@@ -18,8 +20,11 @@ export const ProjectsSection: React.FC = () => {
   return (
     <Section id="projects" className="projects-section">
       <Container>
-        <Heading>{t('projects.title')}</Heading>
-        <div className="projects-grid">
+        <Heading>{t("projects.title")}</Heading>
+        <div
+          ref={ref as React.RefObject<HTMLDivElement>}
+          className={`projects-grid stagger-children fade-in-up${inView ? " visible" : ""}`}
+        >
           {projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-image-container">
@@ -36,6 +41,16 @@ export const ProjectsSection: React.FC = () => {
                 <p className="project-description">
                   {t(`projects.items.${project.id}.description`)}
                 </p>
+                {"technologies" in project &&
+                  Array.isArray(project.technologies) && (
+                    <div className="project-tags">
+                      {(project.technologies as string[]).map((tech) => (
+                        <span key={tech} className="project-tag">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 <a
                   href={project.link}
                   target="_blank"
@@ -43,7 +58,7 @@ export const ProjectsSection: React.FC = () => {
                   className="project-link"
                   onClick={() => goToProject(project.id)}
                 >
-                  {t('projects.viewProject')}
+                  {t("projects.viewProject")}
                   <ExternalLink className="project-link-icon" />
                 </a>
               </div>

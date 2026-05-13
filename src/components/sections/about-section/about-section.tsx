@@ -1,10 +1,11 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Code2, Palette, Globe2 } from 'lucide-react';
-import { Container } from '../../ui/container/container';
-import { Section } from '../../ui/section/section';
-import { Heading } from '../../ui/heading/heading';
-import './about-section.css';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { Code2, Palette, Globe2 } from "lucide-react";
+import { Container } from "../../ui/container/container";
+import { Section } from "../../ui/section/section";
+import { Heading } from "../../ui/heading/heading";
+import { useInView } from "../../../hooks/use-in-view";
+import "./about-section.css";
 
 const skillIcons = {
   webDev: Code2,
@@ -14,38 +15,44 @@ const skillIcons = {
 
 export const AboutSection: React.FC = () => {
   const { t } = useTranslation();
+  const { ref, inView } = useInView();
 
   const skills = [
     {
-      key: 'webDev',
+      key: "webDev",
       icon: skillIcons.webDev,
-      title: t('about.skills.webDev.title'),
-      description: t('about.skills.webDev.description'),
+      title: t("about.skills.webDev.title"),
+      description: t("about.skills.webDev.description"),
     },
     {
-      key: 'uiUx',
+      key: "uiUx",
       icon: skillIcons.uiUx,
-      title: t('about.skills.uiUx.title'),
-      description: t('about.skills.uiUx.description'),
+      title: t("about.skills.uiUx.title"),
+      description: t("about.skills.uiUx.description"),
     },
     {
-      key: 'global',
+      key: "global",
       icon: skillIcons.global,
-      title: t('about.skills.global.title'),
-      description: t('about.skills.global.description'),
+      title: t("about.skills.global.title"),
+      description: t("about.skills.global.description"),
     },
   ];
 
   return (
     <Section id="about" className="about-section">
       <Container>
-        <Heading>{t('about.title')}</Heading>
-        <div className="skills-grid">
+        <Heading>{t("about.title")}</Heading>
+        <div
+          ref={ref as React.RefObject<HTMLDivElement>}
+          className={`skills-grid stagger-children fade-in-up${inView ? " visible" : ""}`}
+        >
           {skills.map((skill) => {
             const Icon = skill.icon;
             return (
               <div key={skill.key} className="skill-card">
-                <Icon className="skill-icon" />
+                <div className="skill-icon-wrapper">
+                  <Icon className="skill-icon" />
+                </div>
                 <h3 className="skill-title">{skill.title}</h3>
                 <p className="skill-description">{skill.description}</p>
               </div>
