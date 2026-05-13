@@ -2,8 +2,35 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Performance hints -->
+    <link
+      rel="preconnect"
+      href="https://www.googletagmanager.com"
+      crossorigin
+    />
+    <link
+      rel="preconnect"
+      href="https://firebaseinstallations.googleapis.com"
+      crossorigin
+    />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/profile.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
 
     <!-- Primary Meta Tags -->
     <title>
@@ -20,6 +47,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fabián Scherle" />
     <meta property="og:url" content="https://fabian-scherle.github.io/" />
     <meta
       property="og:title"
@@ -33,28 +61,36 @@
       property="og:image"
       content="https://fabian-scherle.github.io/images/profile.webp"
     />
+    <meta property="og:image:type" content="image/webp" />
+    <meta
+      property="og:image:alt"
+      content="Foto de Fabián Scherle, Desarrollador Full Stack y Arquitecto de Software"
+    />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://fabian-scherle.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://fabian-scherle.github.io/" />
     <meta
-      property="twitter:title"
+      name="twitter:title"
       content="Fabián Scherle - Desarrollador Full Stack y Arquitecto de Software"
     />
     <meta
-      property="twitter:description"
+      name="twitter:description"
       content="Portfolio profesional de Fabián Scherle. Desarrollador Full Stack y Arquitecto de Software con experiencia en Java, Python, React, Flutter, Django y tecnologías cloud."
     />
     <meta
-      property="twitter:image"
+      name="twitter:image"
       content="https://fabian-scherle.github.io/images/profile.webp"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Foto de Fabián Scherle, Desarrollador Full Stack y Arquitecto de Software"
     />
 
     <!-- SEO -->
-    <meta
-      name="keywords"
-      content="Fabián Scherle, desarrollador full stack, arquitecto software, Java, Python, React, Flutter, Django, AWS, GCP, Kubernetes"
-    />
     <meta name="author" content="Fabián Scherle" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://fabian-scherle.github.io/" />
@@ -66,7 +102,9 @@
         "@type": "Person",
         "name": "Fabián Scherle",
         "url": "https://fabian-scherle.github.io/",
+        "image": "https://fabian-scherle.github.io/images/profile.webp",
         "jobTitle": "Desarrollador Full Stack y Arquitecto de Software",
+        "description": "Portfolio profesional de Fabián Scherle. Desarrollador Full Stack y Arquitecto de Software con experiencia en Java, Python, React, Flutter, Django y tecnologías cloud.",
         "knowsAbout": [
           "Java",
           "Python",
@@ -75,12 +113,28 @@
           "Django",
           "AWS",
           "GCP",
-          "Kubernetes"
+          "Kubernetes",
+          "Software Architecture",
+          "Microservices",
+          "Cloud Computing"
         ],
         "sameAs": [
           "https://github.com/fabian-scherle",
           "https://www.linkedin.com/in/fabián-scherle-carboneres-5ba3831b5"
         ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Fabián Scherle - Portfolio",
+        "url": "https://fabian-scherle.github.io/",
+        "inLanguage": ["es", "en", "fr"],
+        "author": {
+          "@type": "Person",
+          "name": "Fabián Scherle"
+        }
       }
     </script>
   </head>
