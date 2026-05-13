@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "firebase": "^11.1.0",
+    "@firebase/analytics": "^0.10.22",
+    "@firebase/app": "^0.14.12",
     "i18next": "^24.1.0",
     "i18next-browser-languagedetector": "^8.0.2",
     "lucide-react": "^0.468.0",

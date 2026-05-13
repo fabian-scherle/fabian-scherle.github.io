@@ -1,5 +1,5 @@
-import { getAnalytics } from "firebase/analytics";
-import { FirebaseOptions, initializeApp } from "firebase/app";
+import { getAnalytics } from "@firebase/analytics";
+import { FirebaseOptions, initializeApp } from "@firebase/app";
 
 const firebaseConfig: FirebaseOptions = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY!,
@@ -8,7 +8,7 @@ const firebaseConfig: FirebaseOptions = {
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET!,
   messagingSenderId: import.meta.env.VITE_FIREBASE_SENDER_ID!,
   appId: import.meta.env.VITE_FIREBASE_APP_ID!,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID!
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID!,
 };
 
 // Initialize Firebase
