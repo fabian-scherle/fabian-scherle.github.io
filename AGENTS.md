@@ -4,12 +4,12 @@ Vite + React 18 + TypeScript portfolio site. Single-page app deployed to GitHub 
 
 ## Commands
 
-- `npm run dev` — Vite dev server
-- `npm run build` — runs `tsc -b` then `vite build`. **Type errors fail the build** (no separate typecheck script).
-- `npm run lint` — ESLint (flat config in `eslint.config.js`)
-- `npm run preview` — preview built `dist/`
+- `pnpm dev` — Vite dev server
+- `pnpm build` — runs `tsc -b` then `vite build`. **Type errors fail the build** (no separate typecheck script).
+- `pnpm lint` — ESLint (flat config in `eslint.config.js`)
+- `pnpm preview` — preview built `dist/`
 
-No test framework is configured. Do not invent `npm test`.
+No test framework is configured. Do not invent `pnpm test`.
 
 Node 20.18 (see `README.md` and CI).
 
