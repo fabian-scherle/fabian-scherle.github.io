@@ -5,7 +5,7 @@ export const projects = [
     image:
       "https://avatars.githubusercontent.com/u/145842066?s=400&u=8df7484b1798223b9be02fe403e7d8f37458ba81&v=4",
     link: "https://copeoapp.com/",
-    technologies: ["React Native", "Node.js", "Firebase"],
+    technologies: ["Flutter", "Firebase", "GCP", "Spring Boot"],
   },
   {
     id: "balhom",
@@ -13,7 +13,7 @@ export const projects = [
     image:
       "https://raw.githubusercontent.com/balhom/.github/refs/heads/main/balhom_icon.png",
     link: "https://github.com/balhom",
-    technologies: ["Flutter", "Django", "PostgreSQL"],
+    technologies: ["React", "Quarkus", "Kotlin"],
   },
   {
     id: "todoApp",
@@ -21,7 +21,7 @@ export const projects = [
     image:
       "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png",
     link: "https://github.com/fabbo-repo/todo-app",
-    technologies: ["Flutter"],
+    technologies: ["React", "Spring Boot", "Kubernetes"],
   },
   {
     id: "currencyApi",
@@ -29,7 +29,7 @@ export const projects = [
     image:
       "https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png",
     link: "https://github.com/fabbo-repo/currency-conversion-api",
-    technologies: ["Python", "FastAPI"],
+    technologies: ["Python", "Django", "Selenium"],
   },
   {
     id: "wayat",
