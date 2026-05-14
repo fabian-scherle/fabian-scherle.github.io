@@ -3,16 +3,21 @@ name: Publish to GitHub Pages
 on:
   push:
     branches:
-        - main
+      - main
 
 jobs:
   build-push:
     runs-on: ubuntu-latest
     name: Build and Push
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -20,10 +25,10 @@ jobs:
           node-version: 20.18
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
