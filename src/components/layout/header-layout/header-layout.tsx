@@ -23,7 +23,7 @@ export const HeaderLayout: React.FC = () => {
       <Container>
         <nav className="header-nav">
           <div className="header-content">
-            <h1 className="header-title">Fabián Scherle</h1>
+            <span className="header-title">Fabián Scherle</span>
             <div className="header-links">
               <NavLinksLayout />
               <LanguageSwitcher />

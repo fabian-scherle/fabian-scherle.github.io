@@ -13,4 +13,11 @@ const firebaseConfig: FirebaseOptions = {
 
 // Initialize Firebase
 export const firebaseApp = initializeApp(firebaseConfig);
-export const firebaseAnalytics = getAnalytics(firebaseApp);
+
+// `getAnalytics` requires browser globals (window, document). During the
+// build-time prerender step this module runs under Node, so guard it to keep
+// SSR/prerendering from crashing. Analytics is only ever used on user clicks.
+export const firebaseAnalytics =
+  typeof window !== "undefined"
+    ? getAnalytics(firebaseApp)
+    : (undefined as unknown as ReturnType<typeof getAnalytics>);

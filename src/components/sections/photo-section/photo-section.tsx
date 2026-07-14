@@ -45,7 +45,7 @@ export const PhotoSection: React.FC = () => {
             />
           </div>
           <div className="profile-info">
-            <h2 className="profile-title">{t("photo.greeting")}</h2>
+            <h1 className="profile-title">{t("photo.greeting")}</h1>
             <p className="profile-description">{t("photo.description")}</p>
             <div className="profile-actions">
               <Button href={getCVPath()} icon>
