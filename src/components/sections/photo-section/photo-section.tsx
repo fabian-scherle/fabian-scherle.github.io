@@ -5,7 +5,7 @@ import { Container } from "../../ui/container/container";
 import { Section } from "../../ui/section/section";
 import { useInView } from "../../../hooks/use-in-view";
 import "./photo-section.css";
-import { Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { logFirebaseAnalyticsEvent } from "../../../utils/firebase-analytics-utils";
 
 export const PhotoSection: React.FC = () => {
@@ -19,6 +19,10 @@ export const PhotoSection: React.FC = () => {
 
   const goToLinkedin = () => {
     logFirebaseAnalyticsEvent("go-linkeding");
+  };
+
+  const goToGithub = () => {
+    logFirebaseAnalyticsEvent("go-github");
   };
 
   return (
@@ -56,6 +60,16 @@ export const PhotoSection: React.FC = () => {
               >
                 <Linkedin className="social-icon" />
                 <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/fabbo-repo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                onClick={goToGithub}
+              >
+                <Github className="social-icon" />
+                <span>GitHub</span>
               </a>
             </div>
           </div>
