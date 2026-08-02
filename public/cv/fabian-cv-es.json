@@ -27,7 +27,7 @@
     "title": "Summary",
     "columns": 1,
     "hidden": false,
-    "content": "<p style=\"text-align: left;\">Ingeniero de Software con experiencia en desarrollo full stack y arquitecturas de microservicios en entornos cloud-native sobre Kubernetes. Especializado en desarrollo backend con Spring Boot y en tecnologías frontend como Angular, React y Flutter, con foco en la construcción de soluciones escalables y mantenibles.</p>"
+    "content": "<p style=\"text-align: left;\">Ingeniero de Software con experiencia en desarrollo full stack y arquitecturas de microservicios en entornos cloud-native sobre Kubernetes. Especializado en desarrollo backend con Spring Boot y en tecnologías frontend como Angular, React y Flutter, con foco en la construcción de soluciones escalables y mantenibles.</p><p style=\"text-align: left;\">Experiencia en la aplicación de IA en todos los ciclos de desarrollo de software, desde el análisis de requisitos y el diseño técnico hasta la implementación, las pruebas, la revisión de código, la documentación y el mantenimiento, empleando agentes y asistentes de IA para acelerar la entrega sin comprometer la calidad.</p>"
   },
   "sections": {
     "profiles": {
@@ -57,6 +57,9 @@
         {
           "id": "ln53htc1edgbniugfwlaspz2",
           "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
           "company": "Sopra Steria",
           "position": "Software Engineer",
           "location": "",
@@ -65,12 +68,15 @@
             "url": "https://www.soprasteria.es/",
             "label": "Sopra Steria"
           },
-          "description": "<p>Desarrollo y evolución de sistemas basados en arquitecturas de microservicios dentro del ámbito financiero de plataformas de apuestas deportivas, trabajando en entornos de alta concurrencia y criticidad.</p><p>Desarrollo backend con Spring Boot, integración de sistemas de mensajería mediante Apache Kafka y RabbitMQ, así como desarrollo frontend con Angular y React. Procesos de integración y despliegue continuo mediante ArgoCD, con aplicaciones desplegadas sobre Kubernetes.</p><p>Uso de metodologías ágiles, aplicando técnicas de control de calidad como revisiones de código, pruebas automatizadas y validación continua.</p>",
+          "description": "<p>Desarrollo y evolución de sistemas basados en microservicios dentro del ámbito financiero de plataformas de apuestas deportivas, en entornos de alta concurrencia y criticidad.</p><p>Desarrollo backend con Spring Boot y mensajería mediante Apache Kafka y RabbitMQ, junto con desarrollo frontend en Angular y React. Integración y despliegue continuo con ArgoCD sobre Kubernetes, bajo metodologías ágiles con revisiones de código y pruebas automatizadas.</p><p>Uso de herramientas de IA como OpenCode en todo el ciclo de desarrollo: análisis de código legado, diseño técnico, implementación, pruebas automatizadas, revisiones de código asistidas y documentación.</p>",
           "roles": []
         },
         {
           "id": "y36j275xlx38sgzenypy1ex3",
           "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
           "company": "Altia",
           "position": "Software Engineer",
           "location": "",
@@ -92,6 +98,9 @@
         {
           "id": "nf119n2jjpifggyahonju4yo",
           "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
           "school": "Universidad Politécnica de Valencia",
           "degree": "Ingeniería Informática",
           "area": "",
@@ -107,6 +116,9 @@
         {
           "id": "kcrjjic7fqx850syzat1151u",
           "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
           "school": "Escuela de Negocios Europea de Barcelona",
           "degree": "MBA",
           "area": "",
@@ -188,6 +200,26 @@
             "Keycloak",
             "OAuth2",
             "OpenID Connect"
+          ]
+        },
+        {
+          "id": "qz4m8pt1c7ksd9vxarn6ewhb",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "AI-Assisted Software Development",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "OpenCode",
+            "AI Coding Agents",
+            "GitHub Copilot",
+            "LLMs",
+            "Prompt Engineering",
+            "MCP (Model Context Protocol)",
+            "AI-Assisted Code Review",
+            "AI-Assisted Testing",
+            "AI-Assisted Documentation"
           ]
         }
       ]
@@ -305,12 +337,15 @@
         {
           "id": "lcfxa12ywtjzv4ln6y22it6u",
           "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
           "company": "Capgemini",
           "position": "Full Stack Developer",
           "location": "",
           "period": "Feb 2022 - Oct 2024",
           "website": {
-            "url": "",
+            "url": "https://www.capgemini.com",
             "label": ""
           },
           "description": "<p>Proyectos basados en arquitecturas de microservicios y entornos cloud, participando en todo el ciclo de vida del software, desde el diseño técnico hasta la implementación, despliegue y mantenimiento.</p><p>Desarrollo backend con Spring Boot, diseñando APIs REST e integraciones entre servicios mediante Eureka y OpenFeign, así como desarrollo frontend con React, Angular y Flutter, aplicando patrones de arquitectura y buenas prácticas de desarrollo.</p><p>Liderazgo técnico, coordinando el equipo de backend, con revisiones de código y mentoría a desarrolladores junior.</p><p>Diseño y despliegue de arquitecturas sobre Kubernetes, integradas con Keycloak, S3 y proveedores cloud como AWS, Google Cloud y OVH, incluyendo tareas de operación.</p>",
@@ -319,6 +354,9 @@
         {
           "id": "f2q138wvx8qhskkszld5igoa",
           "hidden": false,
+          "options": {
+            "showLinkInTitle": true
+          },
           "company": "Dialapplet",
           "position": "Software Developer Intern",
           "location": "",
@@ -336,7 +374,7 @@
   "metadata": {
     "template": "gengar",
     "layout": {
-      "sidebarWidth": 35,
+      "sidebarWidth": 30,
       "pages": [
         {
           "fullWidth": false,
@@ -350,7 +388,6 @@
           ],
           "sidebar": [
             "profiles",
-            "skills",
             "interests",
             "awards",
             "publications",
@@ -361,7 +398,8 @@
           "fullWidth": true,
           "main": [
             "ibozgz9diye0c39y73b8v1zd",
-            "certifications"
+            "certifications",
+            "skills"
           ],
           "sidebar": []
         }

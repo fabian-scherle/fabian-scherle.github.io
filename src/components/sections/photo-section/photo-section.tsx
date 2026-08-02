@@ -14,7 +14,7 @@ export const PhotoSection: React.FC = () => {
 
   const getCVPath = () => {
     logFirebaseAnalyticsEvent("download-cv-" + i18n.language.substring(0, 2));
-    return `/cv/cv_${i18n.language.substring(0, 2)}.pdf`;
+    return `/cv/fabian-cv-${i18n.language.substring(0, 2)}.pdf`;
   };
 
   const goToLinkedin = () => {
