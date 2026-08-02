@@ -1,0 +1,420 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "/uploads/019dd33d-99b5-727f-b9f3-930149025407/pictures/1777365699807.webp",
+    "size": 100,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 100,
+    "borderColor": "rgba(0, 0, 0, 0.5)",
+    "borderWidth": 1,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Fabián Scherle Carboneres",
+    "headline": "Software Engineer",
+    "email": "fabianscherle99@gmail.com",
+    "phone": "+34 677 16 96 87",
+    "location": "Valencia, España",
+    "website": {
+      "url": "https://fabian-scherle.github.io",
+      "label": ""
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Summary",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Software Engineer with experience in full stack development and microservices-based architectures in cloud-native environments on Kubernetes. Specialized in backend development with Spring Boot and frontend technologies such as Angular, React, and Flutter, with a strong focus on building scalable, reliable, and maintainable solutions.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "GitHub",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "uw14bfwv1ju526v4t7o7ergw",
+          "hidden": false,
+          "icon": "github",
+          "iconColor": "",
+          "network": "GitHub",
+          "username": "fabbo-repo",
+          "website": {
+            "url": "https://github.com/fabbo-repo",
+            "label": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "ln53htc1edgbniugfwlaspz2",
+          "hidden": false,
+          "company": "Sopra Steria",
+          "position": "Software Engineer",
+          "location": "",
+          "period": "May 2025 – Present",
+          "website": {
+            "url": "https://www.soprasteria.es/",
+            "label": "Sopra Steria"
+          },
+          "description": "<p>Development and evolution of systems based on microservices architectures within the financial domain of sports betting platforms, working in high-concurrency and mission-critical environments.</p><p>Backend development using Spring Boot, including the integration of messaging systems through Apache Kafka and RabbitMQ, as well as frontend development with Angular and React.Continuous integration and deployment processes using ArgoCD, with applications deployed on Kubernetes.</p><p>Agile methodologies, applying quality control practices such as code reviews, automated testing, and continuous validation.</p>",
+          "roles": []
+        },
+        {
+          "id": "y36j275xlx38sgzenypy1ex3",
+          "hidden": false,
+          "company": "Altia",
+          "position": "Software Engineer",
+          "location": "",
+          "period": "Oct 2024 - Apr 2025",
+          "website": {
+            "url": "https://www.altiacompany.com/",
+            "label": "Altia"
+          },
+          "description": "<p>Development and maintenance of distributed systems based on microservices architectures within a large-scale distributed infrastructure implemented by the European Patent Office (EPO).</p><p>Continuous work with Spring Boot and Apache Kafka in event-driven architectures, with deployments on Kubernetes and collaboration across multiple teams.</p>",
+          "roles": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "nf119n2jjpifggyahonju4yo",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "school": "Polytechnic University of Valencia",
+          "degree": "Computer Engineering",
+          "area": "",
+          "grade": "",
+          "location": "",
+          "period": "2018 - 2022",
+          "website": {
+            "url": "https://www.upv.es/",
+            "label": "UPV"
+          },
+          "description": ""
+        },
+        {
+          "id": "kcrjjic7fqx850syzat1151u",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "school": "European Business School of Barcelona",
+          "degree": "MBA",
+          "area": "",
+          "grade": "",
+          "location": "",
+          "period": "2025 - 2026",
+          "website": {
+            "url": "https://eneb.es/",
+            "label": "ENEB"
+          },
+          "description": "<p>Master of Business Administration (MBA) + Master in Project Management</p>"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "skills": {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "kwku7toxesz89eega7w0b9zw",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Software Development",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Java",
+            "Spring Boot",
+            "Microservices Architecture",
+            "REST APIs",
+            "Angular",
+            "React",
+            "Flutter",
+            "TypeScript",
+            "JavaScript"
+          ]
+        },
+        {
+          "id": "hr5xu7diis8f15bdw7cgyfvy",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Cloud, DevOps & Distributed Systems",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Kubernetes",
+            "Docker",
+            "ArgoCD",
+            "CI/CD",
+            "AWS",
+            "Google Cloud Platform",
+            "OVH Cloud",
+            "Apache Kafka",
+            "RabbitMQ",
+            "Event-Driven Architecture"
+          ]
+        },
+        {
+          "id": "yl6ulzut72bj2h0slqnrq00d",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Databases & Security",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "PostgreSQL",
+            "Oracle DB",
+            "Relational Databases",
+            "Keycloak",
+            "OAuth2",
+            "OpenID Connect"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "r6v78wbnoda03zcznz70a0y7",
+          "hidden": false,
+          "language": "Spanish - Native",
+          "fluency": "",
+          "level": 0
+        },
+        {
+          "id": "wlewxjmvjkcwj3g8w2bzexoq",
+          "hidden": false,
+          "language": "English - B2",
+          "fluency": "",
+          "level": 0
+        },
+        {
+          "id": "eydzhuuatlkcf1npldvz3awe",
+          "hidden": false,
+          "language": "French - A2",
+          "fluency": "",
+          "level": 0
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "awards": {
+      "title": "Awards",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "u8vl7f1h5tm5ox0xf92r5are",
+          "hidden": false,
+          "title": "AWS Certified Solutions Architect – Associate",
+          "issuer": "Amazon Web Services Training and Certification",
+          "date": "Apr 2024 - Apr 2027",
+          "website": {
+            "url": "https://www.credly.com/badges/e8a4d5b1-60e2-497d-aa24-77ef926e5333",
+            "label": "Credly"
+          },
+          "description": ""
+        },
+        {
+          "id": "yw79bjuvs6r6qlyk23i0ww0g",
+          "hidden": false,
+          "title": "OVH Discover Solution Architect",
+          "issuer": "",
+          "date": "Nov 2023 - Nov 2026",
+          "website": {
+            "url": "https://partner.ovhcloud.training/Directory/Login/Login.aspx?ReturnUrl=%2fbadges%2fbadge.php%3fhash%3d78353d34901a744b12a4db1d7eb32aee9eac09f7&from=sso",
+            "label": "OVH Partner Program"
+          },
+          "description": ""
+        },
+        {
+          "id": "xjrbw47cdecja6xycch6cigp",
+          "hidden": false,
+          "title": "Google Cloud Digital Leader",
+          "issuer": "Google Cloud",
+          "date": "Mar 2023 - Mar 2026",
+          "website": {
+            "url": "https://www.credly.com/badges/fe09439f-27b8-4256-a2a7-b293dd46dcda",
+            "label": "Credly"
+          },
+          "description": ""
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publications",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    }
+  },
+  "customSections": [
+    {
+      "title": "Professional Experience",
+      "columns": 1,
+      "hidden": false,
+      "id": "ibozgz9diye0c39y73b8v1zd",
+      "type": "experience",
+      "items": [
+        {
+          "id": "lcfxa12ywtjzv4ln6y22it6u",
+          "hidden": false,
+          "company": "Capgemini",
+          "position": "Full Stack Developer",
+          "location": "",
+          "period": "Feb 2022 - Oct 2024",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Projects based on microservices architectures and cloud environments, participating in the entire software lifecycle, from technical design to implementation, deployment, and maintenance.</p><p>Backend development with Spring Boot, designing REST APIs and service integrations using Eureka and OpenFeign, as well as frontend development with React, Angular, and Flutter, applying architectural patterns and development best practices.</p><p>Technical leadership responsibilities, coordinating the backend team, performing code reviews and mentoring junior developers.</p><p>Design and deployment of Kubernetes-based architectures, integrated with Keycloak, S3, and cloud providers such as AWS, Google Cloud, and OVH, including operational tasks.</p>",
+          "roles": []
+        },
+        {
+          "id": "f2q138wvx8qhskkszld5igoa",
+          "hidden": false,
+          "company": "Dialapplet",
+          "position": "Software Developer Intern",
+          "location": "",
+          "period": "Jul 2021 - Oct 2021",
+          "website": {
+            "url": "https://www.dialapplet.com",
+            "label": "Dialapplet"
+          },
+          "description": "<p>Solution-oriented environment for call centers. Analysis of the technologies and tools used within the domain.</p><p>Development and maintenance of C++ applications, on Linux systems and PostgreSQL databases.</p>",
+          "roles": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "template": "gengar",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "summary",
+            "education",
+            "projects",
+            "experience",
+            "volunteer",
+            "references"
+          ],
+          "sidebar": [
+            "profiles",
+            "skills",
+            "interests",
+            "awards",
+            "publications",
+            "languages"
+          ]
+        },
+        {
+          "fullWidth": true,
+          "main": [
+            "ibozgz9diye0c39y73b8v1zd",
+            "certifications"
+          ],
+          "sidebar": []
+        }
+      ]
+    },
+    "css": {
+      "enabled": false,
+      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}"
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 34,
+      "marginY": 34,
+      "format": "a4",
+      "locale": "en-US",
+      "hideIcons": false
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(38, 71, 106, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "PT Sans",
+        "fontWeights": [
+          "400"
+        ],
+        "fontSize": 10.5,
+        "lineHeight": 1.5
+      },
+      "heading": {
+        "fontFamily": "PT Sans",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 13.5,
+        "lineHeight": 1.5
+      }
+    },
+    "notes": ""
+  }
+}
