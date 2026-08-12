@@ -27,7 +27,7 @@
     "title": "Summary",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Software Engineer with experience in full stack development and microservices-based architectures in cloud-native environments on Kubernetes. Specialized in backend development with Spring Boot and frontend technologies such as Angular, React, and Flutter, with a strong focus on building scalable, reliable, and maintainable solutions.</p><p>Experienced in applying AI across the entire software development lifecycle, from requirements analysis and technical design to implementation, testing, code review, documentation, and maintenance, using AI coding agents and assistants to increase delivery speed without compromising quality.</p>"
+    "content": "<p>Software Engineer with experience in full stack development and microservices-based architectures in cloud-native environments on Kubernetes. Specialized in backend development with Spring Boot and Python, and frontend technologies such as Angular, React, and Flutter, with a strong focus on building scalable, reliable, and maintainable solutions.</p><p>Experienced in applying AI across the entire software development lifecycle, from requirements analysis and technical design to implementation, testing, code review, documentation, and maintenance, using AI coding agents and assistants to increase delivery speed without compromising quality.</p>"
   },
   "sections": {
     "profiles": {
@@ -68,7 +68,7 @@
             "url": "https://www.soprasteria.es/",
             "label": "Sopra Steria"
           },
-          "description": "<p>Development and evolution of microservices-based systems within the financial domain of sports betting platforms, in high-concurrency and mission-critical environments.</p><p>Backend development with Spring Boot and messaging through Apache Kafka and RabbitMQ, along with frontend development in Angular and React. Continuous integration and deployment with ArgoCD on Kubernetes, under agile methodologies with code reviews and automated testing.</p><p>Use of AI tools such as OpenCode across the whole development lifecycle: analysis of legacy code, technical design, implementation, automated testing, assisted code reviews, and documentation.</p>",
+          "description": "<p>Development and evolution of microservices-based systems within the financial domain of sports betting platforms, in high-concurrency and mission-critical environments.</p><p>Backend development with Spring Boot, along with Python and FastAPI in specific microservices, and messaging through Apache Kafka and RabbitMQ, plus frontend development in Angular and React. Continuous integration and deployment with ArgoCD on Kubernetes, under agile methodologies with code reviews and automated testing.</p><p>Use of AI tools such as OpenCode across the whole development lifecycle: analysis of legacy code, technical design, implementation, automated testing, assisted code reviews, and documentation.</p>",
           "roles": []
         },
         {
@@ -85,7 +85,7 @@
             "url": "https://www.altiacompany.com/",
             "label": "Altia"
           },
-          "description": "<p>Development and maintenance of distributed systems based on microservices architectures within a large-scale distributed infrastructure implemented by the European Patent Office (EPO).</p><p>Continuous work with Spring Boot and Apache Kafka in event-driven architectures, with deployments on Kubernetes and collaboration across multiple teams.</p>",
+          "description": "<p>Development and maintenance of distributed systems based on microservices architectures within a large-scale distributed infrastructure implemented by the European Patent Office (EPO).</p><p>Continuous work with Spring Boot and Apache Kafka in event-driven architectures, together with Python for the analysis of API models used in data analysis, with deployments on Kubernetes and collaboration across multiple teams.</p>",
           "roles": []
         }
       ]
@@ -161,7 +161,10 @@
             "React",
             "Flutter",
             "TypeScript",
-            "JavaScript"
+            "JavaScript",
+            "Python",
+            "FastAPI",
+            "Django"
           ]
         },
         {
@@ -348,7 +351,7 @@
             "url": "https://www.capgemini.com/",
             "label": ""
           },
-          "description": "<p>Projects based on microservices architectures and cloud environments, participating in the entire software lifecycle, from technical design to implementation, deployment, and maintenance.</p><p>Backend development with Spring Boot, designing REST APIs and service integrations using Eureka and OpenFeign, as well as frontend development with React, Angular, and Flutter, applying architectural patterns and development best practices.</p><p>Technical leadership responsibilities, coordinating the backend team, performing code reviews and mentoring junior developers.</p><p>Design and deployment of Kubernetes-based architectures, integrated with Keycloak, S3, and cloud providers such as AWS, Google Cloud, and OVH, including operational tasks.</p>",
+          "description": "<p>Projects based on microservices architectures and cloud environments, participating in the entire software lifecycle, from technical design to implementation, deployment, and maintenance.</p><p>Backend development with Spring Boot, designing REST APIs and service integrations using Eureka and OpenFeign, as well as web development with Python and Django for the company's internal project sites, and frontend development with React, Angular, and Flutter, applying architectural patterns and development best practices.</p><p>Technical leadership responsibilities, coordinating the backend team, performing code reviews and mentoring junior developers.</p><p>Design and deployment of Kubernetes-based architectures, integrated with Keycloak, S3, and cloud providers such as AWS, Google Cloud, and OVH, including operational tasks.</p>",
           "roles": []
         },
         {
@@ -365,7 +368,7 @@
             "url": "https://www.dialapplet.com",
             "label": "Dialapplet"
           },
-          "description": "<p>Solution-oriented environment for call centers. Analysis of the technologies and tools used within the domain.</p><p>Development and maintenance of C++ applications, on Linux systems and PostgreSQL databases.</p>",
+          "description": "<p>Solution-oriented environment for call centers. Analysis of the technologies and tools used within the domain.</p><p>Development and maintenance of C++ applications, on Linux systems and PostgreSQL databases, along with a Python library for consuming AWS services such as Amazon Lex.</p>",
           "roles": []
         }
       ]
