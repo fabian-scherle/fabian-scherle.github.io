@@ -7,7 +7,7 @@ export const en = {
       contact: "Contact",
     },
     hero: {
-      role: "Software Engineer · Valencia, España",
+      role: "Software Engineer · Valencia, Spain",
       lead: "I work on microservices in cloud-native environments, mostly on the backend with Spring Boot and Python, and on the frontend too when a project calls for it. I care about building things that stay reliable and easy to maintain.",
       downloadCV: "Download CV",
       portraitAlt: "Fabián Scherle, software engineer based in Valencia",
@@ -115,7 +115,7 @@ export const en = {
       title: "Get in touch.",
       github: "fabbo-repo on GitHub",
       downloadCV: "Download CV (PDF)",
-      location: "Valencia, España",
+      location: "Valencia, Spain",
     },
   },
 };
