@@ -1,0 +1,24 @@
+{
+  "artboards": [
+    { "file": "Current.dc.html", "title": "Today — for comparison", "x": 0, "y": 0, "w": 1440, "h": 1180 },
+    { "file": "Main.dc.html", "title": "Editorial Ink — desktop", "x": 1560, "y": 0, "w": 1440, "h": 4200 },
+    { "file": "Mobile.dc.html", "title": "Editorial Ink — mobile", "x": 3120, "y": 0, "w": 390, "h": 4300 }
+  ],
+  "annotations": [
+    {
+      "id": "note-current",
+      "x": 0,
+      "y": -170,
+      "w": 520,
+      "text": "TODAY\nRebuilt from src/ at exact values, with the real project logos.\n\nThe problems: no hierarchy past the name, three icon cards that say almost nothing, no experience section, and no way to contact you.\n\nAlso worth fixing whichever design wins: Todo App and Currency Conversion API both use the generic GitHub logo as their thumbnail."
+    },
+    {
+      "id": "note-a",
+      "x": 1560,
+      "y": -170,
+      "w": 700,
+      "text": "EDITORIAL INK — the direction we're building\nWarm paper, ink, one accent. Instrument Serif + Instrument Sans + JetBrains Mono.\n\nAll seven projects sit in one numbered list at equal weight, each with its real logo in a bordered square. Experience and Contact are new sections, both drawn from your CV — say the word if you'd rather drop either.\n\nThe accent is a tweak chip above this frame; one of the swatches is your current indigo."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

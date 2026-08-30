@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <style>
+    /* Ink on the body so any frame taller than the page reads as more footer,
+       never as a pale strip below it. The page itself sets the paper tone. */
+    body { margin: 0; background: #17150f; color: #17150f;
+      font-family: 'Instrument Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased; }
+    a { color: #17150f; text-decoration: none; }
+    a:hover { color: #b04a26; }
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; font-weight: 400; }
+    .mono { font-family: 'JetBrains Mono', 'Cascadia Mono', Consolas, monospace; }
+    .pad { padding-left: 24px; padding-right: 24px; }
+
+    .bar { display: flex; align-items: center; justify-content: space-between;
+      padding-top: 16px; padding-bottom: 16px; border-bottom: 1px solid #ddd6c9; }
+    .burger { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+      margin-right: -10px; color: #3d392f; }
+
+    .eyebrow { display: flex; align-items: center; gap: 8px;
+      font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #b04a26; }
+    .eyebrow::before { content: ""; width: 6px; height: 6px; background: #b04a26; flex: none; }
+
+    .band { background: #17150f; color: #b9b2a1; display: flex; flex-wrap: wrap; gap: 6px 18px;
+      padding-top: 16px; padding-bottom: 16px; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .ex-row { border-top: 1px solid #ddd6c9; padding-top: 20px; padding-bottom: 20px;
+      display: flex; flex-direction: column; gap: 8px; }
+    .ex-row:last-child { border-bottom: 1px solid #ddd6c9; }
+    .ex-keys { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+    .ex-keys span { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10.5px;
+      color: #5a554a; border: 1px solid #ddd6c9; padding: 3px 8px; border-radius: 2px; }
+
+    .w-row { border-top: 1px solid #ddd6c9; padding-top: 20px; padding-bottom: 20px;
+      display: flex; flex-direction: column; gap: 8px; }
+    .w-row:last-of-type { border-bottom: 1px solid #ddd6c9; }
+    .w-tags { display: flex; flex-wrap: wrap; gap: 6px; font-family: 'JetBrains Mono', Consolas, monospace;
+      font-size: 10.5px; color: #8b8475; }
+    .w-head { display: flex; align-items: center; gap: 14px; }
+    .w-thumb { width: 56px; height: 56px; flex: none; background: #fffdf9; border: 1px solid #ddd6c9;
+      display: flex; align-items: center; justify-content: center; padding: 9px; }
+    .w-thumb img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+
+    .path { background: #efeae1; }
+    .p-row { border-top: 1px solid #ddd6c9; padding-top: 20px; padding-bottom: 20px;
+      display: flex; flex-direction: column; gap: 7px; }
+    .p-row:last-of-type { border-bottom: 1px solid #ddd6c9; }
+
+    .page { background: #f7f4ee; }
+    .contact { background: #17150f; color: #f7f4ee; }
+    .contact a { color: #f7f4ee; }
+  </style>
+</helmet>
+
+<div class="page">
+
+  <header class="bar pad">
+    <span style="font-size: 15px; font-weight: 600; letter-spacing: -0.01em">Fabián Scherle</span>
+    <div style="display: flex; align-items: center; gap: 4px">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.09em; color: #8b8475">EN</span>
+      <span class="burger">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+      </span>
+    </div>
+  </header>
+
+  <section class="pad" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding-top: 36px; padding-bottom: 40px">
+    <p class="eyebrow mono">Software Engineer · Valencia</p>
+    <h1 class="serif" style="font-size: 58px; line-height: 0.9; letter-spacing: -0.025em; margin: 0">
+      Fabián<br>Scherle
+    </h1>
+    <figure style="margin: 0; width: 100%; height: 260px; position: relative">
+      <img src="profile.webp" alt="Fabián Scherle" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block">
+    </figure>
+    <p style="font-size: 17px; line-height: 1.6; color: #3d392f; margin: 0; text-wrap: pretty">
+      I work on microservices in cloud-native environments, mostly on the backend with Spring Boot and Python, and on
+      the frontend too when a project calls for it. I care about building things that stay reliable and easy to maintain.
+    </p>
+    <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: 6px">
+      <a href="#cv" style="display: flex; align-items: center; justify-content: center; gap: 10px; background: #17150f; color: #f7f4ee; height: 52px; font-size: 15px; font-weight: 500">
+        Download CV
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"></path><path d="m6 11 6 6 6-6"></path><path d="M4 21h16"></path></svg>
+      </a>
+      <div style="display: flex; gap: 10px">
+        <a href="#gh" style="flex: 1; display: flex; align-items: center; justify-content: center; height: 52px; font-size: 15px; font-weight: 500; border: 1px solid #ddd6c9">GitHub</a>
+        <a href="#li" style="flex: 1; display: flex; align-items: center; justify-content: center; height: 52px; font-size: 15px; font-weight: 500; border: 1px solid #ddd6c9">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="band pad mono">
+    <span>Spring Boot</span><span>Kubernetes</span><span>Kafka</span><span>Python</span><span>React</span><span>Flutter</span><span>ArgoCD</span><span>PostgreSQL</span>
+  </div>
+
+  <section class="pad" style="padding-top: 44px; padding-bottom: 44px">
+    <p class="eyebrow mono" style="margin-bottom: 12px">Expertise</p>
+    <h2 class="serif" style="font-size: 36px; line-height: 1; letter-spacing: -0.02em; margin: 0 0 24px">What I work on</h2>
+
+    <div class="ex-row">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">01</span>
+      <h3 style="font-size: 18px; font-weight: 600; margin: 0">Software Development</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #3d392f; margin: 0">
+        Java and Spring Boot services, REST APIs and integrations, with Angular, React and Flutter clients.
+      </p>
+      <div class="ex-keys"><span>Java</span><span>Spring Boot</span><span>React</span><span>Flutter</span><span>Python</span></div>
+    </div>
+
+    <div class="ex-row">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">02</span>
+      <h3 style="font-size: 18px; font-weight: 600; margin: 0">Cloud &amp; Distributed Systems</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #3d392f; margin: 0">
+        Kubernetes and ArgoCD, event-driven services over Kafka and RabbitMQ, on AWS, GCP and OVH.
+      </p>
+      <div class="ex-keys"><span>Kubernetes</span><span>ArgoCD</span><span>Kafka</span><span>AWS</span><span>GCP</span></div>
+    </div>
+
+    <div class="ex-row">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">03</span>
+      <h3 style="font-size: 18px; font-weight: 600; margin: 0">Data &amp; Security</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #3d392f; margin: 0">
+        PostgreSQL and Oracle modelling, identity with Keycloak, OAuth2 and OpenID Connect.
+      </p>
+      <div class="ex-keys"><span>PostgreSQL</span><span>Oracle DB</span><span>Keycloak</span><span>OAuth2</span></div>
+    </div>
+
+    <div class="ex-row">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">04</span>
+      <h3 style="font-size: 18px; font-weight: 600; margin: 0">AI-Assisted Development</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #3d392f; margin: 0">
+        Coding agents across the lifecycle: legacy analysis, design, implementation, testing, review, docs.
+      </p>
+      <div class="ex-keys"><span>OpenCode</span><span>Copilot</span><span>MCP</span></div>
+    </div>
+  </section>
+
+  <section class="pad" style="padding-bottom: 44px">
+    <p class="eyebrow mono" style="margin-bottom: 12px">Seven projects</p>
+    <h2 class="serif" style="font-size: 36px; line-height: 1; letter-spacing: -0.02em; margin: 0 0 24px">Things I’ve made</h2>
+
+    <div class="w-row">
+      <div class="w-head">
+        <span class="w-thumb"><img src="copeo.png" alt="Copeo"></span>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">01</span>
+          <h3 class="serif" style="font-size: 26px; line-height: 1.05; letter-spacing: -0.02em; margin: 0">Copeo</h3>
+        </div>
+      </div>
+      <p style="font-size: 15px; line-height: 1.55; color: #3d392f; margin: 0">The social app for backpackers arriving in Australia, built around real plans and real people.</p>
+      <span class="w-tags">Flutter · Firebase · GCP · Spring Boot</span>
+    </div>
+
+    <div class="w-row">
+      <div class="w-head">
+        <span class="w-thumb"><img src="balhom.png" alt="BalHom"></span>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">02</span>
+          <h3 class="serif" style="font-size: 26px; line-height: 1.05; letter-spacing: -0.02em; margin: 0">BalHom</h3>
+        </div>
+      </div>
+      <p style="font-size: 15px; line-height: 1.55; color: #3d392f; margin: 0">Open-source app for day-to-day expense and revenue management.</p>
+      <span class="w-tags">React · Quarkus · Kotlin</span>
+    </div>
+
+    <div class="w-row">
+      <div class="w-head">
+        <span class="w-thumb"><img src="github.png" alt="Currency Conversion API"></span>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">03</span>
+          <h3 class="serif" style="font-size: 26px; line-height: 1.05; letter-spacing: -0.02em; margin: 0">Currency Conversion API</h3>
+        </div>
+      </div>
+      <p style="font-size: 15px; line-height: 1.55; color: #3d392f; margin: 0">Conversion rates and historical data for multiple currencies, behind one clean API.</p>
+      <span class="w-tags">Python · Django · Selenium</span>
+    </div>
+
+    <div class="w-row">
+      <div class="w-head">
+        <span class="w-thumb"><img src="wayat.png" alt="Wayat"></span>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">04</span>
+          <h3 class="serif" style="font-size: 26px; line-height: 1.05; letter-spacing: -0.02em; margin: 0">Wayat</h3>
+        </div>
+      </div>
+      <p style="font-size: 15px; line-height: 1.55; color: #3d392f; margin: 0">A devonfw demonstrator MVP built with Flutter and Python on Google Cloud.</p>
+      <span class="w-tags">Flutter · Python · GCP</span>
+    </div>
+
+    <div class="w-row">
+      <div class="w-head">
+        <span class="w-thumb"><img src="hangar.png" alt="Hangar"></span>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">05</span>
+          <h3 class="serif" style="font-size: 26px; line-height: 1.05; letter-spacing: -0.02em; margin: 0">Hangar</h3>
+        </div>
+      </div>
+      <p style="font-size: 15px; line-height: 1.55; color: #3d392f; margin: 0">Documentation and tooling packaged into a ready-made DevOps environment.</p>
+      <span class="w-tags">DevOps · Bash · CI/CD</span>
+    </div>
+
+    <div class="w-row">
+      <div class="w-head">
+        <span class="w-thumb"><img src="github.png" alt="Todo App"></span>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">06</span>
+          <h3 class="serif" style="font-size: 26px; line-height: 1.05; letter-spacing: -0.02em; margin: 0">Todo App</h3>
+        </div>
+      </div>
+      <p style="font-size: 15px; line-height: 1.55; color: #3d392f; margin: 0">Task management end to end, from the React client down to the cluster.</p>
+      <span class="w-tags">React · Spring Boot · Kubernetes</span>
+    </div>
+
+    <div class="w-row">
+      <div class="w-head">
+        <span class="w-thumb"><img src="openshs.png" alt="OpenSHS Improvement"></span>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span class="mono" style="font-size: 11px; letter-spacing: 0.1em; color: #b04a26">07</span>
+          <h3 class="serif" style="font-size: 26px; line-height: 1.05; letter-spacing: -0.02em; margin: 0">OpenSHS Improvement</h3>
+        </div>
+      </div>
+      <p style="font-size: 15px; line-height: 1.55; color: #3d392f; margin: 0">New interaction mechanisms for the Open Smart Home Simulator.</p>
+      <span class="w-tags">Python · IoT</span>
+    </div>
+
+    <a href="#more" class="mono" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 52px; margin-top: 22px; border: 1px solid #ddd6c9; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #b04a26">
+      All projects on GitHub
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+    </a>
+  </section>
+
+  <section class="path pad" style="padding-top: 44px; padding-bottom: 44px">
+    <p class="eyebrow mono" style="margin-bottom: 12px">Experience</p>
+    <h2 class="serif" style="font-size: 36px; line-height: 1; letter-spacing: -0.02em; margin: 0 0 24px">Where I've worked</h2>
+
+    <div class="p-row">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.08em; color: #8b8475">Since 2025</span>
+      <h3 style="font-size: 18px; font-weight: 600; margin: 0">Sopra Steria · Software Engineer</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #3d392f; margin: 0">
+        Microservices in high-concurrency financial platforms. Spring Boot, FastAPI, Kafka, ArgoCD on Kubernetes.
+      </p>
+    </div>
+
+    <div class="p-row">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.08em; color: #8b8475">2024 to 2025</span>
+      <h3 style="font-size: 18px; font-weight: 600; margin: 0">Altia · Software Engineer</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #3d392f; margin: 0">
+        Event-driven systems inside the European Patent Office's infrastructure.
+      </p>
+    </div>
+
+    <div class="p-row">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.08em; color: #8b8475">2022 to 2024</span>
+      <h3 style="font-size: 18px; font-weight: 600; margin: 0">Capgemini · Full Stack Developer</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #3d392f; margin: 0">
+        Microservices and cloud from design to operation. Led the backend team and mentored juniors.
+      </p>
+    </div>
+
+    <div class="p-row">
+      <span class="mono" style="font-size: 11px; letter-spacing: 0.08em; color: #8b8475">2021</span>
+      <h3 style="font-size: 18px; font-weight: 600; margin: 0">Dialapplet · Intern</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #3d392f; margin: 0">
+        C++ on Linux with PostgreSQL, plus a Python library for AWS services.
+      </p>
+    </div>
+  </section>
+
+  <footer class="contact pad" style="padding-top: 48px; padding-bottom: 28px">
+    <p class="eyebrow mono" style="margin-bottom: 16px">Contact</p>
+    <h2 class="serif" style="font-size: 40px; line-height: 0.98; letter-spacing: -0.025em; margin: 0 0 20px">
+      Get in touch.
+    </h2>
+    <a href="#mail" class="serif" style="font-size: 21px; border-bottom: 1px solid #4a453c; padding-bottom: 5px; display: inline-block">
+      fabianscherle99@gmail.com
+    </a>
+    <div class="mono" style="display: flex; flex-direction: column; gap: 12px; margin-top: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #b9b2a1">
+      <a href="#gh" style="color: #b9b2a1">fabbo-repo on GitHub</a>
+      <a href="#li" style="color: #b9b2a1">LinkedIn</a>
+    </div>
+    <div class="mono" style="display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #35312a; margin-top: 28px; padding-top: 18px; font-size: 10.5px; letter-spacing: 0.06em; color: #7d776b">
+      <span>Valencia, España</span>
+      <span>EN / ES / FR</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>
