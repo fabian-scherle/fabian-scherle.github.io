@@ -1,20 +1,48 @@
 :root {
-  --color-primary: #1a1a1a;
-  --color-secondary: #4a4a4a;
-  --color-background: #ffffff;
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
-  --color-gray-600: #4b5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1f2937;
-  --color-gray-900: #111827;
+  /* ─── Surfaces ─────────────────────────────────────────────────────────── */
+  --color-paper: #f7f4ee;
+  --color-paper-deep: #efeae1;
+  --color-surface: #fffdf9;
+  --color-ink: #17150f;
 
-  /* Accent color — indigo */
-  --color-accent: #3033c0;
-  --color-accent-hover: #4f46e5;
-  --color-accent-light: #eef2ff;
-  --color-accent-muted: #a5b4fc;
+  /* ─── Text ─────────────────────────────────────────────────────────────── */
+  --color-text: #3d392f;
+  --color-text-secondary: #5a554a;
+  --color-text-muted: #8b8475;
+  --color-on-ink: #b9b2a1;
+
+  /* ─── Lines ────────────────────────────────────────────────────────────── */
+  --color-rule: #ddd6c9;
+  --color-rule-ink: #35312a;
+
+  /* ─── Accent ───────────────────────────────────────────────────────────── */
+  --color-accent: #b04a26;
+  --color-accent-hover: #8f3a1c;
+
+  /* ─── Type ─────────────────────────────────────────────────────────────── */
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-body: "Instrument Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Mono", Consolas, monospace;
+
+  /* ─── Rhythm ───────────────────────────────────────────────────────────── */
+  --page-gutter: 1.5rem;
+  --section-gap: 2.75rem;
+  --header-height: 3.75rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-gutter: 3rem;
+    --section-gap: 4rem;
+    --header-height: 4.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --page-gutter: 7.5rem;
+    --section-gap: 5.5rem;
+  }
 }
 
 html {
@@ -27,39 +55,80 @@ html {
   box-sizing: border-box;
 }
 
+/*
+ * Ink on the body, paper on the page wrapper: any viewport taller than the
+ * document reads as more footer rather than as a pale strip under it.
+ */
 body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--font-body);
   line-height: 1.5;
-  color: var(--color-primary);
-  background-color: var(--color-background);
+  color: var(--color-text);
+  background-color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  background-color: var(--color-paper);
+}
+
+a {
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 90rem;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--page-gutter);
 }
 
 .section {
-  padding: 4rem 0;
+  padding: var(--section-gap) 0;
 }
 
-/* Utility classes */
-.w-5 {
-  width: 1.25rem;
+/* ─── Shared type utilities ─────────────────────────────────────────────── */
+
+.serif {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 
-.h-5 {
-  height: 1.25rem;
+.mono {
+  font-family: var(--font-mono);
 }
 
-/* Icon styles */
-.lucide-icon {
-  width: 1.25rem;
-  height: 1.25rem;
+/*
+ * The small letterspaced label above a section title or the hero. The leading
+ * square is the only place the accent appears at rest on a paper background.
+ */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 0.4375rem;
+  height: 0.4375rem;
+  background-color: var(--color-accent);
+  flex: none;
 }
 
 /* ─── Scroll-triggered animations ──────────────────────────────────────── */
@@ -82,22 +151,22 @@ body {
   transition-delay: 0ms;
 }
 .stagger-children > *:nth-child(2) {
-  transition-delay: 100ms;
+  transition-delay: 80ms;
 }
 .stagger-children > *:nth-child(3) {
-  transition-delay: 200ms;
+  transition-delay: 160ms;
 }
 .stagger-children > *:nth-child(4) {
-  transition-delay: 300ms;
+  transition-delay: 240ms;
 }
 .stagger-children > *:nth-child(5) {
-  transition-delay: 400ms;
+  transition-delay: 320ms;
 }
 .stagger-children > *:nth-child(6) {
-  transition-delay: 500ms;
+  transition-delay: 400ms;
 }
 .stagger-children > *:nth-child(7) {
-  transition-delay: 600ms;
+  transition-delay: 480ms;
 }
 
 /* ─── Reduced motion ────────────────────────────────────────────────────── */

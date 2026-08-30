@@ -1,0 +1,26 @@
+.keyword-band {
+  background-color: var(--color-ink);
+  color: var(--color-on-ink);
+  padding: 1rem 0;
+}
+
+.keyword-band-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 1.125rem;
+  font-family: var(--font-mono);
+  font-size: 0.65625rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .keyword-band {
+    padding: 1.25rem 0;
+  }
+
+  .keyword-band-list {
+    gap: 0.5rem 1.875rem;
+    font-size: 0.75rem;
+  }
+}

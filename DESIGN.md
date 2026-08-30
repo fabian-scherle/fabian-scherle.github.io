@@ -1,13 +1,22 @@
 # DESIGN
 
-Design notes for the portfolio site. Source of truth is the code in `src/`; this document summarizes the visual system and component composition.
+Design notes for the portfolio site. Source of truth is the code in `src/`; this
+document summarizes the visual system and component composition.
+
+The design this implements was drafted on a canvas first. Its artboards live in
+[`design/`](design/README.md), which also records the open decisions.
 
 ## Goals
 
-- Single-page, scroll-based personal portfolio with three sections: photo/intro, about, projects.
-- Lightweight: no UI framework, no CSS-in-JS, no Tailwind. Plain CSS with CSS custom properties.
-- Multilingual (EN / ES / FR) with auto-detection via `i18next-browser-languagedetector`.
-- Mobile-first responsive layout with a single `768px` breakpoint (plus `1024px` for the projects grid).
+- Single-page, scroll-based personal portfolio: hero, expertise, work,
+  experience, contact.
+- Lightweight: no UI framework, no CSS-in-JS, no Tailwind. Plain CSS with CSS
+  custom properties.
+- Multilingual (EN / ES / FR) with auto-detection via
+  `i18next-browser-languagedetector`.
+- Mobile-first responsive layout with breakpoints at `768px` and `1200px`.
+- Editorial rather than card-based: content is separated by 1px rules and
+  whitespace, not by boxes and shadows.
 
 ## Visual language
 
@@ -17,162 +26,192 @@ Defined in `src/global.css` on `:root`:
 
 | Token | Value | Typical use |
 | --- | --- | --- |
-| `--color-primary` | `#1a1a1a` | Default body text |
-| `--color-secondary` | `#4a4a4a` | Reserved (not currently referenced by components) |
-| `--color-background` | `#ffffff` | Page background |
-| `--color-gray-50` | `#f9fafb` | `about-section` background, `project-card` background |
-| `--color-gray-100` | `#f3f4f6` | Header border, hover backgrounds, secondary button |
-| `--color-gray-200` | `#e5e7eb` | Hover state for secondary surfaces |
-| `--color-gray-600` | `#4b5563` | Muted text, icon color |
-| `--color-gray-700` | `#374151` | Skill icons, project link text |
-| `--color-gray-800` | `#1f2937` | Primary button hover |
-| `--color-gray-900` | `#111827` | Headings, primary button background |
+| `--color-paper` | `#f7f4ee` | Page background (on `.app`) |
+| `--color-paper-deep` | `#efeae1` | Experience section, row hover |
+| `--color-surface` | `#fffdf9` | Project thumbnail wells |
+| `--color-ink` | `#17150f` | Headings, keyword band, contact footer, `body` |
+| `--color-text` | `#3d392f` | Body copy |
+| `--color-text-secondary` | `#5a554a` | Nav links, keyword chips |
+| `--color-text-muted` | `#8b8475` | Dates, roles, project tags |
+| `--color-on-ink` | `#b9b2a1` | Text on the ink surfaces |
+| `--color-rule` | `#ddd6c9` | Every row and section divider |
+| `--color-rule-ink` | `#35312a` | Dividers on ink |
+| `--color-accent` | `#b04a26` | Eyebrow squares, indices, active nav, hover |
+| `--color-accent-hover` | `#8f3a1c` | Reserved for accent-on-accent states |
 
-The palette is intentionally monochrome — no accent or brand color. All emphasis comes from contrast between gray shades and the white background.
+The accent is deliberately scarce: small squares, two-digit indices, the active
+nav underline, and link hover. Nothing large is painted with it.
+
+**`body` is ink, `.app` is paper.** A viewport taller than the document then
+reads as more footer rather than as a pale strip under it. Keep that pairing.
 
 ### Typography
 
-- System font stack declared on `body`: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`.
-- No web fonts are loaded — keeps the bundle minimal and first paint fast.
-- `line-height: 1.5` on body.
-- Type scale (rem, observed in components):
-  - Section heading: `1.5rem` mobile → `2rem` ≥ 768px (`heading.css`)
-  - Profile title: `2rem`
-  - Profile description: `1.125rem`
-  - Skill / project titles: `1.125rem`
-  - Body / descriptions: `0.875rem` – `1rem`
-- Weight: `bold` for headings, `600` for card titles, `500` for buttons.
+Three families, loaded from Google Fonts in `index.html` with `display=swap`.
+Each has a metric-near fallback so the first paint is readable.
+
+| Token | Family | Used for |
+| --- | --- | --- |
+| `--font-display` | Instrument Serif, Georgia | Name, section titles, project names |
+| `--font-body` | Instrument Sans, Segoe UI | Body copy, buttons, subheadings |
+| `--font-mono` | JetBrains Mono, Consolas | Labels, indices, dates, tags, nav |
+
+Type scale at `≥1200px`: name `6.5rem`, section titles `3.25rem`, project names
+`1.875rem`, hero lead `1.3125rem`, section body `0.96875rem`, mono labels
+`0.6875rem`–`0.75rem` with `0.06em`–`0.16em` tracking.
+
+This is a change from the previous system, which used the platform font stack
+and loaded no web fonts. The tradeoff is deliberate: two network requests for
+the typographic identity the design rests on.
 
 ### Spacing & radius
 
-- Global reset zeroes `margin` / `padding` and sets `box-sizing: border-box` on `*`.
-- Section vertical padding: `4rem 0` (`.section` utility and section CSS).
-- Card / button radius: `0.5rem`. Profile image is a full circle (`border-radius: 50%`).
-- Card inner padding: `1rem` – `1.5rem`.
-- Shadows are minimal: `0 1px 2px 0 rgba(0,0,0,0.05)` for resting cards, `0 4px 6px -1px rgba(0,0,0,0.1)` for hover/profile image.
+- `--page-gutter` steps `1.5rem` → `3rem` → `7.5rem`, so a 1440px viewport gives
+  1200px of content, matching the artboards.
+- `--section-gap` steps `2.75rem` → `4rem` → `5.5rem`, applied by `.section`.
+- `--header-height` is the scroll-margin for every anchor target.
+- **No border radius anywhere.** Squared corners are part of the direction.
+- Shadows are not used. Separation comes from rules and background tone.
 
 ### Motion
 
-- Single transition pattern: `transition: all 0.2s` (or specific property variants) on buttons, links, and cards.
-- No keyframed animations.
+- `fade-in-up` on scroll via `useInView`, with `stagger-children` delays of 80ms.
+- Colour and background transitions of `0.2s` on interactive elements.
+- Everything is disabled under `prefers-reduced-motion`.
 
 ## Layout system
 
-### Container
+`Container` clamps to `90rem` and applies `--page-gutter`. The `.container` rule
+lives in `global.css` and is the single definition; the component adds nothing.
 
-`Container` (`src/components/ui/container/container.tsx`) wraps content in a `.container` class defined globally:
-
-- `max-width: 1200px`
-- horizontal padding `1.5rem`
-- centered with `margin: 0 auto`
-
-### Section
-
-`Section` (`src/components/ui/section/section.tsx`) renders a `<section>` with `py-16` plus an optional id and className. Each section file owns its own background and refined spacing — the wrapper just provides semantics and an anchor target (`#photo`, `#about`, `#projects`).
-
-### Responsive strategy
-
-Mobile-first. Two breakpoints in use:
-
-- `@media (min-width: 768px)` — switches header nav from hidden to inline, photo section from stacked to side-by-side, skills grid to 3 columns, projects grid to 2 columns, heading font scales up.
-- `@media (min-width: 1024px)` — projects grid grows to 3 columns.
-
-There is no explicit dark mode; the design is light-theme only.
+`Section` renders a `<section>` with `.section` padding, an optional id, and
+`scroll-margin-top: var(--header-height)`.
 
 ## Page composition
 
-`App.tsx` mounts the page:
-
 ```
 IndexLayout
-├─ HeaderLayout       (fixed, blurred backdrop)
-└─ <main>
-   ├─ PhotoSection    (#photo)    — intro, profile image, CV download, LinkedIn
-   ├─ AboutSection    (#about)    — 3 skill cards
-   └─ ProjectsSection (#projects) — N project cards from constants/projects.ts
+├─ HeaderLayout           (fixed, blurred paper backdrop)
+├─ <main>
+│  ├─ PhotoSection        (#top)         hero: eyebrow, name, lead, actions, portrait
+│  ├─ KeywordBand                        ink strip of product names
+│  ├─ AboutSection        (#expertise)   4 typographic rows with keyword chips
+│  ├─ ProjectsSection     (#work)        7 numbered project rows
+│  └─ ExperienceSection   (#experience)  4 role rows on paper-deep
+└─ ContactSection         (#contact)     ink footer, email, links, colophon
 ```
 
 ### Header
 
-`HeaderLayout`:
-- `position: fixed`, full width, `z-index: 40`.
-- Semi-transparent white background (`rgba(255,255,255,0.9)`) with `backdrop-filter: blur(8px)`.
-- 1px bottom border in `--color-gray-100`.
-- Desktop (`≥ 768px`): inline `NavLinksLayout` + `LanguageSwitcher`. Hamburger button hidden.
-- Mobile (`< 768px`): hamburger only, opens `MobileMenu` overlay. `useScrollLock` freezes body scroll while open.
+- `position: fixed`, `z-index: 40`, paper at 92% with `backdrop-filter: blur(8px)`.
+- Desktop (`≥768px`): `NavLinksLayout` + `LanguageSwitcher` inline.
+- Mobile: current language code plus a hamburger opening `MobileMenu`.
+  `useScrollLock` freezes body scroll while open.
+- `NavLinksLayout` tracks the scrolled section with an `IntersectionObserver` and
+  underlines it in accent. `SECTION_IDS` is in page order.
 
-### Photo section
+### Hero
 
-- Minimum height `70vh`, centered content, extra top padding (`5rem`) to clear the fixed header.
-- Layout flips from column (centered) on mobile to row (left-aligned, `gap: 4rem`) at `≥ 768px`.
-- Profile image: circular, `8rem × 8rem`, soft shadow.
-- Primary CTA: `Button` (renders as `<a download>` when `href` is provided) pointing at `/cv/cv_{lang}.pdf`. Secondary action: LinkedIn external link.
+- Portrait first on mobile, second on desktop, via flex `order`.
+- Rectangular, not circular. An offset 1px accent frame sits behind it at
+  `≥768px` only, where the gutter has room for the overhang.
+- Actions are full width and stacked on mobile, inline from `768px`.
 
-### About section
+### Expertise
 
-- `--color-gray-50` background to visually separate from neighbors.
-- Three skill cards (Software Development / Cloud / Software Architecture). The TS key `uiUx` is retained for backwards compatibility; the human-facing string is "Cloud". Each card pairs a `lucide-react` icon with title + description, all translated.
-- Grid: 1 column on mobile, 3 equal columns at `≥ 768px`.
+- Four rows from `src/constants/expertise.ts`, driven by id. Titles and
+  descriptions are translated; keywords are product names and are not.
+- The three lucide icon cards this replaced are gone. No icons in this section.
 
-### Projects section
+### Work
 
-- White background.
-- Cards are data-driven from `src/constants/projects.ts`; copy comes from `projects.items.<id>.{title,description}` in each locale file.
-- Card structure: image area (`6rem` tall, centered, white background) over content (title, 3-line clamped description via `-webkit-line-clamp: 3`, external link with `ExternalLink` icon).
-- Grid: 1 → 2 (`≥ 768px`) → 3 (`≥ 1024px`) columns.
+- Seven rows from `src/constants/projects.ts`, all at equal weight.
+- **The whole row is the anchor**, so the hit target is the full list width.
+- Thumbnails render at 72px in a bordered well; images are still the remote URLs
+  in `projects.ts`.
+- The "view" affordance is hidden below `768px`, where the row itself is the tap
+  target and the label would only add noise.
+
+### Experience
+
+- Four roles from `src/constants/experience.ts`, most recent first. Company names
+  are fixed; period, role and description are translated so they read naturally.
+- `--color-paper-deep` background to pace the scroll between two paper sections.
+
+### Contact
+
+- A `<footer>` on ink, outside `<main>`, carrying the email, GitHub, LinkedIn and
+  the CV, plus a colophon.
 
 ## UI primitives
 
-Reusable building blocks live in `src/components/ui/`:
-
 | Component | Responsibility | Notes |
 | --- | --- | --- |
-| `Button` | Primary CTA. Renders `<a download>` if `href` is set, otherwise `<button>`. | Variants: `primary` (dark) / `secondary` (gray). Optional trailing `Download` icon. |
-| `Heading` | `<h2 class="heading">` with responsive font size and bottom margin. | Used as the section title. |
-| `Section` | Semantic wrapper with `py-16` and optional id/className. | Anchor targets for nav links. |
-| `Container` | `.container` width clamp + horizontal padding. | Used inside every section. |
-| `LanguageSwitcher` | Globe icon button revealing EN / ES / FR options, syncs `i18n.changeLanguage`. | Active language gets the `.active` class. |
-| `MobileMenu` | Full-screen overlay with nav links + language switcher, dismissed on link click. | Returns `null` when `isOpen` is false. |
+| `Button` | Primary CTA. Renders `<a download>` if `href` is set. | `primary` (ink fill) / `secondary` (rule outline). Optional `Download` icon. |
+| `Heading` | Section head: serif title plus an optional `label` eyebrow. | Stacked on mobile, title and label on one line from `768px`. |
+| `Section` | Semantic wrapper with section padding and scroll margin. | Anchor targets for nav links. |
+| `Container` | Width clamp plus gutter. | Used inside every section. |
+| `KeywordBand` | The ink strip under the hero. | `aria-hidden`: every name is repeated in context below. |
+| `LanguageSwitcher` | Three inline codes, EN / ES / FR. | Replaced the globe dropdown: fewer taps for three options. |
+| `MobileMenu` | Sheet from the top with nav links and languages. | Dismissed on link click or backdrop click. |
 
 ## Component conventions
 
-- Each component lives in its own kebab-case folder: `<name>/<name>.tsx` plus a co-located `<name>.css`. CSS is imported at the top of the `.tsx` file (e.g. `import './button.css'`).
-- Components are exported as named `React.FC` (PascalCase) — no default exports except `App`.
-- Props are declared inline with a local `interface` and destructured with explicit type annotations.
-- Icons come exclusively from `lucide-react`. Icon sizing uses utility classes `.w-5 / .h-5` (1.25rem) defined in `global.css`, or component-specific classes like `.skill-icon` / `.button-icon`.
-- No styling props are accepted beyond an optional `className` passthrough — variants are explicit (e.g. `Button.variant`).
+- Each component lives in its own kebab-case folder: `<name>/<name>.tsx` plus a
+  co-located `<name>.css`, imported at the top of the `.tsx`.
+- Components are exported as named `React.FC` (PascalCase); no default exports
+  except `App`.
+- Icons come exclusively from `lucide-react`, sized by a component-scoped class
+  (`.menu-icon`, `.work-cta-icon`, `.button-icon`), not by global utilities.
+- Tap targets are at least `2.75rem` (44px) on every control.
+- Reuse the tokens in `:root`; do not introduce raw hex values in component CSS.
 
 ## Internationalization
 
-- `src/i18n/config.ts` configures `i18next` with browser language detection and a fallback of `en`.
-- Translation namespaces are flat: `header`, `photo`, `about`, `projects`. All UI strings come from `useTranslation().t(...)`; no hard-coded copy in components except section ids and the developer's name in the LinkedIn URL.
-- Project descriptions are looked up dynamically by id: `t(\`projects.items.\${project.id}.title\`)`. Adding a project requires both a `constants/projects.ts` entry **and** matching keys in all three locale files.
-- CV file naming mirrors the language code: `/cv/cv_en.pdf`, `/cv/cv_es.pdf`, `/cv/cv_fr.pdf` under `public/`.
+- `src/i18n/config.ts` configures `i18next` with browser language detection and a
+  fallback of `en`.
+- Namespaces: `header`, `hero`, `about`, `projects`, `experience`, `contact`.
+- List content is looked up by id: `t(\`about.areas.\${area.id}.title\`)`,
+  `t(\`experience.items.\${role.id}.period\`)`,
+  `t(\`projects.items.\${project.id}.title\`)`. Adding an entry needs both a
+  constants entry **and** matching keys in all three locale files.
+- Periods are translated strings ("Since 2025" / "Desde 2025" / "Depuis 2025")
+  rather than formatted dates, so each locale reads naturally.
+- **No em dashes in copy**, by preference. Ranges read "2022 to 2024".
+- CV file naming mirrors the language code: `/cv/fabian-cv-{en,es,fr}.pdf`.
 
 ## SEO & metadata
 
-- `useMeta` hook (`src/hooks/use-meta.ts`) imperatively sets `document.title` and the `<meta name="description">` content via helpers in `src/utils/seo-utils.ts`. There is no `react-helmet` dependency.
-- `App.tsx` calls `useMeta` once on mount with a fixed Spanish description string — this is **not** translated, by design or oversight.
+- `index.html` carries the title, description, Open Graph, Twitter and JSON-LD.
+- `scripts/prerender.mjs` renders the app to static HTML at build time and injects
+  it into `dist/index.html` and `dist/404.html`, so crawlers get real content.
+  The client uses `createRoot`, not `hydrateRoot`, so the markup is replaced
+  rather than hydrated.
+- **Open:** the metadata still says "Desarrollador Full Stack y Arquitecto de
+  Software" while the page and the CV both say "Software Engineer". Changing the
+  `<title>` moves what shows in search results, so it is left as a decision.
 
 ## Analytics
 
-- Firebase Analytics is initialized lazily in `src/config/firebase.ts` from `VITE_FIREBASE_*` env vars.
-- Three events are logged today, all via `logFirebaseAnalyticsEvent` in `src/utils/firebase-analytics-utils.ts`:
-  - `download-cv-{lang}` when the CV link is clicked.
-  - `go-linkeding` (sic) when the LinkedIn link is clicked.
-  - `go-project-{projectId}` when a project link is clicked.
+- Firebase Analytics is initialized lazily in `src/config/firebase.ts`.
+- Events via `logFirebaseAnalyticsEvent`: `download-cv-{lang}`, `go-linkeding`
+  (sic), `go-github`, `go-email`, `go-project-{projectId}`.
 
 ## Assets
 
-- Static assets live in `public/` and are referenced with absolute paths from the site root (e.g. `/images/profile.webp`, `/cv/cv_en.pdf`).
-- Project thumbnails are external URLs (GitHub avatars / raw images) defined in `constants/projects.ts`. These are not self-hosted, so availability depends on the upstream repos.
+- Static assets live in `public/`, referenced from the site root.
+- Project thumbnails are still external URLs (GitHub avatars / raw images) in
+  `constants/projects.ts`, so availability depends on the upstream repos. Two
+  projects share the generic GitHub logo, which shows more in a single column
+  than it did in the old grid.
 
 ## Extending the design
 
-When adding new UI:
-
-1. Create a kebab-case folder under `src/components/{ui|layout|sections}/<name>/` with `<name>.tsx` + `<name>.css`.
-2. Reuse color tokens from `:root`; do not introduce new hex values without adding them as variables in `global.css`.
-3. Use `Container` for horizontal layout, `Section` for new scroll targets, `Heading` for section titles.
-4. Add user-facing strings to all three locale files (`en.ts`, `es.ts`, `fr.ts`) under the matching key.
-5. Source icons from `lucide-react` — don't bring in another icon set.
+1. Create a kebab-case folder under `src/components/{ui|layout|sections}/<name>/`
+   with `<name>.tsx` + `<name>.css`.
+2. Reuse tokens from `:root`; do not introduce new hex values without adding them
+   as variables in `global.css`.
+3. Use `Container`, `Section` and `Heading` rather than re-deriving their spacing.
+4. Separate with rules and tone, not with cards, radii or shadows.
+5. Add strings to all three locale files under the matching key.
+6. Source icons from `lucide-react`.

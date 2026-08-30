@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./nav-links-layout.css";
 
-const SECTION_IDS = ["photo", "about", "projects"];
+/** Page order, so the underline tracks the scroll rather than fighting it. */
+const SECTION_IDS = ["expertise", "work", "experience", "contact"];
 
 export const NavLinksLayout: React.FC = () => {
   const { t } = useTranslation();
-  const [activeSection, setActiveSection] = useState("photo");
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,11 +29,11 @@ export const NavLinksLayout: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  const links = [
-    { href: "#photo", id: "photo", label: t("header.photo") },
-    { href: "#about", id: "about", label: t("header.about") },
-    { href: "#projects", id: "projects", label: t("header.projects") },
-  ];
+  const links = SECTION_IDS.map((id) => ({
+    id,
+    href: `#${id}`,
+    label: t(`header.${id}`),
+  }));
 
   return (
     <div className="nav-links">

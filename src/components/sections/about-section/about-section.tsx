@@ -1,63 +1,46 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Code2, Palette, Globe2 } from "lucide-react";
 import { Container } from "../../ui/container/container";
 import { Section } from "../../ui/section/section";
 import { Heading } from "../../ui/heading/heading";
+import { expertise } from "../../../constants/expertise";
 import { useInView } from "../../../hooks/use-in-view";
 import "./about-section.css";
-
-const skillIcons = {
-  webDev: Code2,
-  uiUx: Palette,
-  global: Globe2,
-};
 
 export const AboutSection: React.FC = () => {
   const { t } = useTranslation();
   const { ref, inView } = useInView();
 
-  const skills = [
-    {
-      key: "webDev",
-      icon: skillIcons.webDev,
-      title: t("about.skills.webDev.title"),
-      description: t("about.skills.webDev.description"),
-    },
-    {
-      key: "uiUx",
-      icon: skillIcons.uiUx,
-      title: t("about.skills.uiUx.title"),
-      description: t("about.skills.uiUx.description"),
-    },
-    {
-      key: "global",
-      icon: skillIcons.global,
-      title: t("about.skills.global.title"),
-      description: t("about.skills.global.description"),
-    },
-  ];
-
   return (
-    <Section id="about" className="about-section">
+    <Section id="expertise" className="expertise-section">
       <Container>
-        <Heading>{t("about.title")}</Heading>
+        <Heading label={t("about.label")}>{t("about.title")}</Heading>
         <div
           ref={ref as React.RefObject<HTMLDivElement>}
-          className={`skills-grid stagger-children fade-in-up${inView ? " visible" : ""}`}
+          className={`expertise-list stagger-children fade-in-up${inView ? " visible" : ""}`}
         >
-          {skills.map((skill) => {
-            const Icon = skill.icon;
-            return (
-              <div key={skill.key} className="skill-card">
-                <div className="skill-icon-wrapper">
-                  <Icon className="skill-icon" />
-                </div>
-                <h3 className="skill-title">{skill.title}</h3>
-                <p className="skill-description">{skill.description}</p>
+          {expertise.map((area, index) => (
+            <article key={area.id} className="expertise-row">
+              <span className="expertise-index mono" aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3 className="expertise-title">
+                {t(`about.areas.${area.id}.title`)}
+              </h3>
+              <div className="expertise-body">
+                <p className="expertise-description">
+                  {t(`about.areas.${area.id}.description`)}
+                </p>
+                <ul className="expertise-keywords">
+                  {area.keywords.map((keyword) => (
+                    <li key={keyword} className="expertise-keyword">
+                      {keyword}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            );
-          })}
+            </article>
+          ))}
         </div>
       </Container>
     </Section>

@@ -1,74 +1,121 @@
 export const en = {
   translation: {
     header: {
-      photo: "Photo",
-      about: "About Me",
-      projects: "Projects",
+      expertise: "Expertise",
+      work: "Work",
+      experience: "Experience",
+      contact: "Contact",
     },
-    photo: {
-      greeting: "Hi! I'm Fabián Scherle",
-      description: "Full Stack Developer and Software Architect",
+    hero: {
+      role: "Software Engineer · Valencia, España",
+      lead: "I work on microservices in cloud-native environments, mostly on the backend with Spring Boot and Python, and on the frontend too when a project calls for it. I care about building things that stay reliable and easy to maintain.",
       downloadCV: "Download CV",
+      portraitAlt: "Fabián Scherle, software engineer based in Valencia",
     },
     about: {
-      title: "About Me",
-      skills: {
-        webDev: {
+      label: "Expertise",
+      title: "What I work on",
+      areas: {
+        development: {
           title: "Software Development",
           description:
-            "Development of applications and services with Java, Python, React, Flutter, and Django.",
+            "Java and Spring Boot services, REST APIs and integrations across microservice boundaries, with Angular, React and Flutter clients on the other side of them.",
         },
-        uiUx: {
-          title: "Cloud",
+        cloud: {
+          title: "Cloud and Distributed Systems",
           description:
-            "Experience with AWS, GCP and Kubernetes infrastructure.",
+            "Kubernetes clusters and ArgoCD pipelines, event-driven services over Kafka and RabbitMQ, running on AWS, Google Cloud and OVH.",
         },
-        global: {
-          title: "Software Architecture",
+        data: {
+          title: "Data and Security",
           description:
-            "Design of distributed systems and microservices architectures.",
+            "Relational modelling on PostgreSQL and Oracle, and identity handled properly with Keycloak, OAuth2 and OpenID Connect.",
+        },
+        ai: {
+          title: "AI-Assisted Development",
+          description:
+            "Coding agents across the whole lifecycle: reading legacy code, technical design, implementation, testing, review and documentation.",
         },
       },
     },
     projects: {
-      title: "My Projects",
-      viewProject: "View Project",
+      label: "Seven projects",
+      title: "Things I've made",
+      viewProject: "View",
       items: {
         copeo: {
           title: "Copeo",
           description:
-            'COPEO is the go-to social app for backpackers new to Australia designed to turn "just arrived" into "just connected" through real plans and authentic people.',
+            "The social app for backpackers arriving in Australia, built around real plans and real people.",
         },
         balhom: {
           title: "BalHom",
           description:
-            "Open source application for day-to-day expenses and revenues management.",
+            "Open-source app for day-to-day expense and revenue management.",
         },
         todoApp: {
           title: "Todo App",
-          description: "Useful app for managing to-do tasks.",
+          description:
+            "Task management end to end, from the React client down to the cluster.",
         },
         currencyApi: {
           title: "Currency Conversion API",
           description:
-            "Currency Conversion API provides a convenient way to obtain currency conversion rates and historical conversion data for multiple currencies.",
+            "Conversion rates and historical data for multiple currencies, behind one clean API.",
         },
         wayat: {
           title: "Wayat",
           description:
-            "Demonstrator/MVP on how to use Flutter, Python (both devonfw incubators) and Google Cloud.",
+            "A devonfw demonstrator MVP built with Flutter and Python on Google Cloud.",
         },
         hangar: {
           title: "Hangar",
           description:
-            "Packaging of documentation and tools needed to create a top-down DevOps (pre-made) environment.",
+            "Documentation and tooling packaged into a ready-made, top-down DevOps environment.",
         },
         openshs: {
           title: "OpenSHS Improvement",
           description:
-            "New interaction mechanisms for Open Smart Home Simulator to generate simulated data in an easy way.",
+            "New interaction mechanisms for the Open Smart Home Simulator, for generating simulated data easily.",
         },
       },
+    },
+    experience: {
+      label: "Experience",
+      title: "Where I've worked",
+      items: {
+        sopraSteria: {
+          period: "Since 2025",
+          role: "Software Engineer",
+          description:
+            "Microservices in the financial domain of sports-betting platforms, in high-concurrency and mission-critical environments. Spring Boot with Python and FastAPI, Kafka and RabbitMQ messaging, Angular and React clients, delivered with ArgoCD on Kubernetes.",
+        },
+        altia: {
+          period: "2024 to 2025",
+          role: "Software Engineer",
+          description:
+            "Distributed, event-driven systems inside the European Patent Office's large-scale infrastructure, built with Spring Boot and Apache Kafka on Kubernetes across several teams.",
+        },
+        capgemini: {
+          period: "2022 to 2024",
+          role: "Full Stack Developer",
+          description:
+            "Microservices and cloud from technical design through to operation. Led the backend team, ran code reviews and mentored juniors, and designed Kubernetes architectures with Keycloak, S3, AWS, GCP and OVH.",
+        },
+        dialapplet: {
+          period: "2021",
+          role: "Software Developer Intern",
+          description:
+            "C++ applications on Linux with PostgreSQL, plus a Python library for consuming AWS services such as Amazon Lex.",
+        },
+      },
+    },
+    contact: {
+      label: "Contact",
+      title: "Get in touch.",
+      github: "fabbo-repo on GitHub",
+      downloadCV: "Download CV (PDF)",
+      location: "Valencia, España",
     },
   },
 };

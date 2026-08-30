@@ -15,7 +15,7 @@ export const Section: React.FC<SectionProps> = ({
     <section
       id={id}
       className={`section ${className}`}
-      style={{ scrollMarginTop: "4rem" }}
+      style={{ scrollMarginTop: "var(--header-height)" }}
     >
       {children}
     </section>
