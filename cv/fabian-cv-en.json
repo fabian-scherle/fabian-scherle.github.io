@@ -1,7 +1,7 @@
 {
   "picture": {
-    "hidden": false,
-    "url": "/uploads/019dd33d-99b5-727f-b9f3-930149025407/pictures/1777365699807.webp",
+    "hidden": true,
+    "url": "",
     "size": 100,
     "rotation": 0,
     "aspectRatio": 1,
@@ -13,25 +13,25 @@
   },
   "basics": {
     "name": "Fabián Scherle Carboneres",
-    "headline": "Software Engineer",
+    "headline": "Software Engineer | Java, Spring Boot & Cloud",
     "email": "fabianscherle99@gmail.com",
     "phone": "+34 677 16 96 87",
-    "location": "Valencia, España",
+    "location": "Valencia, Spain",
     "website": {
       "url": "https://fabian-scherle.github.io",
-      "label": ""
+      "label": "fabian-scherle.github.io"
     },
     "customFields": []
   },
   "summary": {
-    "title": "Summary",
+    "title": "Professional Summary",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Software Engineer with experience in full stack development and microservices-based architectures in cloud-native environments on Kubernetes. Specialized in backend development with Spring Boot and Python, and frontend technologies such as Angular, React, and Flutter, with a strong focus on building scalable, reliable, and maintainable solutions.</p><p>Experienced in applying AI across the entire software development lifecycle, from requirements analysis and technical design to implementation, testing, code review, documentation, and maintenance, using AI coding agents and assistants to increase delivery speed without compromising quality.</p>"
+    "content": "<p>Software Engineer with 4+ years of professional experience developing Java/Spring Boot microservices and full-stack applications, with additional experience in Flutter development. Experienced in event-driven systems, Kubernetes deployments and backend team coordination, with client projects for Arval, Santé publique France and the European Patent Office. AWS Certified Solutions Architect - Associate.</p>"
   },
   "sections": {
     "profiles": {
-      "title": "GitHub",
+      "title": "Online Profile",
       "columns": 1,
       "hidden": false,
       "items": [
@@ -44,7 +44,7 @@
           "username": "fabbo-repo",
           "website": {
             "url": "https://github.com/fabbo-repo",
-            "label": ""
+            "label": "github.com/fabbo-repo"
           }
         }
       ]
@@ -58,24 +58,24 @@
           "id": "ln53htc1edgbniugfwlaspz2",
           "hidden": false,
           "options": {
-            "showLinkInTitle": true
+            "showLinkInTitle": false
           },
           "company": "Sopra Steria",
           "position": "Software Engineer",
           "location": "",
-          "period": "May 2025 – Present",
+          "period": "May 2025 - Oct 2026",
           "website": {
             "url": "https://www.soprasteria.es/",
             "label": "Sopra Steria"
           },
-          "description": "<p>Development and evolution of microservices-based systems within the financial domain of sports betting platforms, in high-concurrency and mission-critical environments.</p><p>Backend development with Spring Boot, along with Python and FastAPI in specific microservices, and messaging through Apache Kafka and RabbitMQ, plus frontend development in Angular and React. Continuous integration and deployment with ArgoCD on Kubernetes, under agile methodologies with code reviews and automated testing.</p><p>Use of AI tools such as OpenCode across the whole development lifecycle: analysis of legacy code, technical design, implementation, automated testing, assisted code reviews, and documentation.</p>",
+          "description": "<ul><li><p>Developed and maintained microservices for financial operations within sports betting platforms using Java and Spring Boot, with Python/FastAPI for selected services.</p></li><li><p>Implemented service messaging with Apache Kafka and RabbitMQ and contributed to frontend development with Angular and React.</p></li><li><p>Worked on continuous delivery with ArgoCD and Kubernetes, automated testing and peer code reviews in an agile team.</p></li><li><p>Used AI coding assistants for legacy code analysis, implementation, testing and documentation.</p></li></ul>",
           "roles": []
         },
         {
           "id": "y36j275xlx38sgzenypy1ex3",
           "hidden": false,
           "options": {
-            "showLinkInTitle": true
+            "showLinkInTitle": false
           },
           "company": "Altia",
           "position": "Software Engineer",
@@ -85,7 +85,7 @@
             "url": "https://www.altiacompany.com/",
             "label": "Altia"
           },
-          "description": "<p>Development and maintenance of distributed systems based on microservices architectures within a large-scale distributed infrastructure implemented by the European Patent Office (EPO).</p><p>Continuous work with Spring Boot and Apache Kafka in event-driven architectures, together with Python for the analysis of API models used in data analysis, with deployments on Kubernetes and collaboration across multiple teams.</p>",
+          "description": "<ul><li><p>Developed and maintained distributed microservices for the European Patent Office (EPO) using Java and Spring Boot.</p></li><li><p>Worked with Apache Kafka in event-driven architectures and Kubernetes deployments, collaborating across multiple teams.</p></li><li><p>Used Python to analyse API models supporting data analysis workflows.</p></li></ul>",
           "roles": []
         }
       ]
@@ -99,7 +99,7 @@
           "id": "nf119n2jjpifggyahonju4yo",
           "hidden": false,
           "options": {
-            "showLinkInTitle": true
+            "showLinkInTitle": false
           },
           "school": "Polytechnic University of Valencia",
           "degree": "Computer Engineering",
@@ -117,10 +117,10 @@
           "id": "kcrjjic7fqx850syzat1151u",
           "hidden": false,
           "options": {
-            "showLinkInTitle": true
+            "showLinkInTitle": false
           },
           "school": "European Business School of Barcelona",
-          "degree": "MBA",
+          "degree": "Master of Business Administration (MBA)",
           "area": "",
           "grade": "",
           "location": "",
@@ -129,7 +129,7 @@
             "url": "https://eneb.es/",
             "label": "ENEB"
           },
-          "description": "<p>Master of Business Administration (MBA) + Master in Project Management</p>"
+          "description": "<p>Master in Project Management</p>"
         }
       ]
     },
@@ -140,7 +140,7 @@
       "items": []
     },
     "skills": {
-      "title": "Skills",
+      "title": "Technical Skills",
       "columns": 1,
       "hidden": false,
       "items": [
@@ -149,22 +149,17 @@
           "hidden": false,
           "icon": "",
           "iconColor": "",
-          "name": "Software Development",
+          "name": "Backend",
           "proficiency": "",
           "level": 0,
           "keywords": [
             "Java",
             "Spring Boot",
-            "Microservices Architecture",
-            "REST APIs",
-            "Angular",
-            "React",
-            "Flutter",
-            "TypeScript",
-            "JavaScript",
             "Python",
             "FastAPI",
-            "Django"
+            "Django",
+            "REST APIs",
+            "Microservices"
           ]
         },
         {
@@ -172,20 +167,15 @@
           "hidden": false,
           "icon": "",
           "iconColor": "",
-          "name": "Cloud, DevOps & Distributed Systems",
+          "name": "Frontend",
           "proficiency": "",
           "level": 0,
           "keywords": [
-            "Kubernetes",
-            "Docker",
-            "ArgoCD",
-            "CI/CD",
-            "AWS",
-            "Google Cloud Platform",
-            "OVH Cloud",
-            "Apache Kafka",
-            "RabbitMQ",
-            "Event-Driven Architecture"
+            "React",
+            "Angular",
+            "TypeScript",
+            "JavaScript",
+            "Flutter"
           ]
         },
         {
@@ -193,16 +183,17 @@
           "hidden": false,
           "icon": "",
           "iconColor": "",
-          "name": "Databases & Security",
+          "name": "Cloud and Delivery",
           "proficiency": "",
           "level": 0,
           "keywords": [
-            "PostgreSQL",
-            "Oracle DB",
-            "Relational Databases",
-            "Keycloak",
-            "OAuth2",
-            "OpenID Connect"
+            "AWS",
+            "Kubernetes",
+            "Docker",
+            "ArgoCD",
+            "CI/CD",
+            "Google Cloud Platform",
+            "OVH Cloud"
           ]
         },
         {
@@ -210,19 +201,31 @@
           "hidden": false,
           "icon": "",
           "iconColor": "",
-          "name": "AI-Assisted Software Development",
+          "name": "Data and Messaging",
           "proficiency": "",
           "level": 0,
           "keywords": [
-            "OpenCode",
-            "AI Coding Agents",
+            "PostgreSQL",
+            "Oracle DB",
+            "Apache Kafka",
+            "RabbitMQ",
+            "Event-Driven Architecture"
+          ]
+        },
+        {
+          "id": "auskillssecuritytools0001",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Security and Development Tools",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Keycloak",
+            "OAuth2",
+            "OpenID Connect",
             "GitHub Copilot",
-            "LLMs",
-            "Prompt Engineering",
-            "MCP (Model Context Protocol)",
-            "AI-Assisted Code Review",
-            "AI-Assisted Testing",
-            "AI-Assisted Documentation"
+            "OpenCode"
           ]
         }
       ]
@@ -235,22 +238,22 @@
         {
           "id": "r6v78wbnoda03zcznz70a0y7",
           "hidden": false,
-          "language": "Spanish - Native",
-          "fluency": "",
+          "language": "Spanish",
+          "fluency": "Native",
           "level": 0
         },
         {
           "id": "wlewxjmvjkcwj3g8w2bzexoq",
           "hidden": false,
-          "language": "English - B2",
-          "fluency": "",
+          "language": "English",
+          "fluency": "Upper-intermediate (B2)",
           "level": 0
         },
         {
           "id": "eydzhuuatlkcf1npldvz3awe",
           "hidden": false,
-          "language": "French - A2",
-          "fluency": "",
+          "language": "French",
+          "fluency": "Elementary (A2)",
           "level": 0
         }
       ]
@@ -275,8 +278,8 @@
         {
           "id": "u8vl7f1h5tm5ox0xf92r5are",
           "hidden": false,
-          "title": "AWS Certified Solutions Architect – Associate",
-          "issuer": "Amazon Web Services Training and Certification",
+          "title": "AWS Certified Solutions Architect - Associate",
+          "issuer": "Amazon Web Services",
           "date": "Apr 2024 - Apr 2027",
           "website": {
             "url": "https://www.credly.com/badges/e8a4d5b1-60e2-497d-aa24-77ef926e5333",
@@ -288,7 +291,7 @@
           "id": "yw79bjuvs6r6qlyk23i0ww0g",
           "hidden": false,
           "title": "OVH Discover Solution Architect",
-          "issuer": "",
+          "issuer": "OVHcloud",
           "date": "Nov 2023 - Nov 2026",
           "website": {
             "url": "https://partner.ovhcloud.training/Directory/Login/Login.aspx?ReturnUrl=%2fbadges%2fbadge.php%3fhash%3d78353d34901a744b12a4db1d7eb32aee9eac09f7&from=sso",
@@ -331,7 +334,7 @@
   },
   "customSections": [
     {
-      "title": "Professional Experience",
+      "title": "Professional Experience Continued",
       "columns": 1,
       "hidden": false,
       "id": "ibozgz9diye0c39y73b8v1zd",
@@ -341,7 +344,7 @@
           "id": "lcfxa12ywtjzv4ln6y22it6u",
           "hidden": false,
           "options": {
-            "showLinkInTitle": true
+            "showLinkInTitle": false
           },
           "company": "Capgemini",
           "position": "Full Stack Developer",
@@ -349,16 +352,16 @@
           "period": "Feb 2022 - Oct 2024",
           "website": {
             "url": "https://www.capgemini.com/",
-            "label": ""
+            "label": "Capgemini"
           },
-          "description": "<p>Projects based on microservices architectures and cloud environments, participating in the entire software lifecycle, from technical design to implementation, deployment, and maintenance.</p><p>Backend development with Spring Boot, designing REST APIs and service integrations using Eureka and OpenFeign, as well as web development with Python and Django for the company's internal project sites, and frontend development with React, Angular, and Flutter, applying architectural patterns and development best practices.</p><p>Technical leadership responsibilities, coordinating the backend team, performing code reviews and mentoring junior developers.</p><p>Design and deployment of Kubernetes-based architectures, integrated with Keycloak, S3, and cloud providers such as AWS, Google Cloud, and OVH, including operational tasks.</p>",
+          "description": "<ul><li><p>Developed Java/Spring Boot microservices and REST APIs for an Arval insurance project, using Eureka and OpenFeign for service integrations.</p></li><li><p>Developed Flutter projects for Santé publique France.</p></li><li><p>Coordinated the backend team, reviewed code and mentored junior developers.</p></li><li><p>Designed and deployed Kubernetes-based architectures across AWS, Google Cloud and OVH, including operational tasks.</p></li><li><p>Integrated Keycloak for identity and access management and S3 for storage.</p></li><li><p>Built frontend applications with React and Angular, and internal project websites with Python and Django.</p></li></ul>",
           "roles": []
         },
         {
           "id": "f2q138wvx8qhskkszld5igoa",
           "hidden": false,
           "options": {
-            "showLinkInTitle": true
+            "showLinkInTitle": false
           },
           "company": "Dialapplet",
           "position": "Software Developer Intern",
@@ -368,41 +371,40 @@
             "url": "https://www.dialapplet.com",
             "label": "Dialapplet"
           },
-          "description": "<p>Solution-oriented environment for call centers. Analysis of the technologies and tools used within the domain.</p><p>Development and maintenance of C++ applications, on Linux systems and PostgreSQL databases, along with a Python library for consuming AWS services such as Amazon Lex.</p>",
+          "description": "<ul><li><p>Developed and maintained C++ applications for call centre solutions on Linux with PostgreSQL databases.</p></li><li><p>Contributed to a Python library integrating AWS services, including Amazon Lex.</p></li></ul>",
           "roles": []
         }
       ]
     }
   ],
   "metadata": {
-    "template": "gengar",
+    "template": "rhyhorn",
     "layout": {
       "sidebarWidth": 30,
       "pages": [
         {
-          "fullWidth": false,
+          "fullWidth": true,
           "main": [
             "summary",
-            "education",
-            "projects",
-            "experience",
-            "volunteer",
-            "references"
-          ],
-          "sidebar": [
             "profiles",
+            "skills",
+            "experience",
+            "projects",
             "interests",
             "awards",
             "publications",
-            "languages"
-          ]
+            "volunteer",
+            "references"
+          ],
+          "sidebar": []
         },
         {
           "fullWidth": true,
           "main": [
             "ibozgz9diye0c39y73b8v1zd",
             "certifications",
-            "skills"
+            "education",
+            "languages"
           ],
           "sidebar": []
         }
@@ -413,13 +415,13 @@
       "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}"
     },
     "page": {
-      "gapX": 4,
-      "gapY": 6,
-      "marginX": 34,
-      "marginY": 34,
+      "gapX": 8,
+      "gapY": 8,
+      "marginX": 48,
+      "marginY": 48,
       "format": "a4",
       "locale": "en-US",
-      "hideIcons": false
+      "hideIcons": true
     },
     "design": {
       "level": {
@@ -427,29 +429,29 @@
         "type": "circle"
       },
       "colors": {
-        "primary": "rgba(38, 71, 106, 1)",
+        "primary": "rgba(0, 0, 0, 1)",
         "text": "rgba(0, 0, 0, 1)",
         "background": "rgba(255, 255, 255, 1)"
       }
     },
     "typography": {
       "body": {
-        "fontFamily": "PT Sans",
+        "fontFamily": "Arial",
         "fontWeights": [
           "400"
         ],
-        "fontSize": 10.5,
-        "lineHeight": 1.5
+        "fontSize": 11,
+        "lineHeight": 1.2
       },
       "heading": {
-        "fontFamily": "PT Sans",
+        "fontFamily": "Arial",
         "fontWeights": [
-          "600"
+          "700"
         ],
-        "fontSize": 13.5,
-        "lineHeight": 1.5
+        "fontSize": 13,
+        "lineHeight": 1.2
       }
     },
-    "notes": ""
+    "notes": "English-language CV for applications in Spain. French citizen based in Valencia, Spain. Rhyhorn template, A4 format and two-page layout retained. Original certification dates retained. Review the exported PDF after import."
   }
 }
