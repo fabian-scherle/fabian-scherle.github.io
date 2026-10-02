@@ -58,7 +58,7 @@
           "id": "ln53htc1edgbniugfwlaspz2",
           "hidden": false,
           "options": {
-            "showLinkInTitle": false
+            "showLinkInTitle": true
           },
           "company": "Sopra Steria",
           "position": "Ingeniero de software",
@@ -66,7 +66,8 @@
           "period": "May 2025 - Oct 2026",
           "website": {
             "url": "https://www.soprasteria.es/",
-            "label": "Sopra Steria"
+            "label": "Sopra Steria",
+            "inlineLink": true
           },
           "description": "<ul><li><p>Desarrollé y mantuve microservicios para operaciones financieras de plataformas de apuestas deportivas con Java y Spring Boot, y Python/FastAPI en determinados servicios.</p></li><li><p>Implementé la mensajería entre servicios con Apache Kafka y RabbitMQ y participé en el desarrollo frontend con Angular y React.</p></li><li><p>Trabajé en la entrega continua con ArgoCD y Kubernetes, pruebas automatizadas y revisiones de código en un equipo ágil.</p></li><li><p>Utilicé asistentes de programación con IA para analizar código heredado, implementar funcionalidades, realizar pruebas y elaborar documentación.</p></li></ul>",
           "roles": []
@@ -75,7 +76,7 @@
           "id": "y36j275xlx38sgzenypy1ex3",
           "hidden": false,
           "options": {
-            "showLinkInTitle": false
+            "showLinkInTitle": true
           },
           "company": "Altia",
           "position": "Ingeniero de software",
@@ -83,7 +84,8 @@
           "period": "Oct 2024 - Abr 2025",
           "website": {
             "url": "https://www.altiacompany.com/",
-            "label": "Altia"
+            "label": "Altia",
+            "inlineLink": true
           },
           "description": "<ul><li><p>Desarrollé y mantuve microservicios distribuidos para la Oficina Europea de Patentes (EPO) con Java y Spring Boot.</p></li><li><p>Trabajé con Apache Kafka en arquitecturas orientadas a eventos y despliegues en Kubernetes, colaborando con varios equipos.</p></li><li><p>Utilicé Python para analizar modelos de API destinados a flujos de análisis de datos.</p></li></ul>",
           "roles": []
@@ -99,7 +101,7 @@
           "id": "nf119n2jjpifggyahonju4yo",
           "hidden": false,
           "options": {
-            "showLinkInTitle": false
+            "showLinkInTitle": true
           },
           "school": "Universitat Politècnica de València",
           "degree": "Ingeniería Informática",
@@ -109,7 +111,8 @@
           "period": "2018 - 2022",
           "website": {
             "url": "https://www.upv.es/",
-            "label": "UPV"
+            "label": "UPV",
+            "inlineLink": true
           },
           "description": ""
         },
@@ -117,7 +120,7 @@
           "id": "kcrjjic7fqx850syzat1151u",
           "hidden": false,
           "options": {
-            "showLinkInTitle": false
+            "showLinkInTitle": true
           },
           "school": "Escuela de Negocios Europea de Barcelona",
           "degree": "Máster en Administración de Empresas (MBA)",
@@ -127,7 +130,8 @@
           "period": "2025 - 2026",
           "website": {
             "url": "https://eneb.es/",
-            "label": "ENEB"
+            "label": "ENEB",
+            "inlineLink": true
           },
           "description": "<p>Máster en Dirección de Proyectos</p>"
         }
@@ -232,7 +236,7 @@
     },
     "languages": {
       "title": "Idiomas",
-      "columns": 1,
+      "columns": 3,
       "hidden": false,
       "items": [
         {
@@ -344,7 +348,7 @@
           "id": "lcfxa12ywtjzv4ln6y22it6u",
           "hidden": false,
           "options": {
-            "showLinkInTitle": false
+            "showLinkInTitle": true
           },
           "company": "Capgemini",
           "position": "Desarrollador Full Stack",
@@ -352,7 +356,8 @@
           "period": "Feb 2022 - Oct 2024",
           "website": {
             "url": "https://www.capgemini.com/",
-            "label": "Capgemini"
+            "label": "Capgemini",
+            "inlineLink": true
           },
           "description": "<ul><li><p>Desarrollé microservicios con Java y Spring Boot y API REST para un proyecto de seguros de Arval, utilizando Eureka y OpenFeign para integrar servicios.</p></li><li><p>Desarrollé proyectos con Flutter para Santé publique France.</p></li><li><p>Coordiné el equipo backend, revisé código y mentoricé a desarrolladores junior.</p></li><li><p>Diseñé y desplegué arquitecturas basadas en Kubernetes en AWS, Google Cloud y OVH, incluyendo tareas de operación.</p></li><li><p>Integré Keycloak para la gestión de identidades y accesos, y S3 para el almacenamiento.</p></li><li><p>Desarrollé aplicaciones frontend con React y Angular, y sitios internos de proyectos con Python y Django.</p></li></ul>",
           "roles": []
@@ -361,7 +366,7 @@
           "id": "f2q138wvx8qhskkszld5igoa",
           "hidden": false,
           "options": {
-            "showLinkInTitle": false
+            "showLinkInTitle": true
           },
           "company": "Dialapplet",
           "position": "Desarrollador de software en prácticas",
@@ -369,7 +374,8 @@
           "period": "Jul 2021 - Oct 2021",
           "website": {
             "url": "https://www.dialapplet.com",
-            "label": "Dialapplet"
+            "label": "Dialapplet",
+            "inlineLink": true
           },
           "description": "<ul><li><p>Desarrollé y mantuve aplicaciones C++ para soluciones de centros de llamadas en Linux con bases de datos PostgreSQL.</p></li><li><p>Participé en el desarrollo de una biblioteca Python para integrar servicios de AWS, incluido Amazon Lex.</p></li></ul>",
           "roles": []
@@ -415,10 +421,10 @@
       "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}"
     },
     "page": {
-      "gapX": 8,
-      "gapY": 8,
-      "marginX": 48,
-      "marginY": 48,
+      "gapX": 6,
+      "gapY": 6,
+      "marginX": 40,
+      "marginY": 32,
       "format": "a4",
       "locale": "en-US",
       "hideIcons": true
@@ -436,22 +442,23 @@
     },
     "typography": {
       "body": {
-        "fontFamily": "Arial",
+        "fontFamily": "Inter",
         "fontWeights": [
-          "400"
+          "400",
+          "700"
         ],
         "fontSize": 11,
-        "lineHeight": 1.2
+        "lineHeight": 1.15
       },
       "heading": {
-        "fontFamily": "Arial",
+        "fontFamily": "Inter",
         "fontWeights": [
           "700"
         ],
         "fontSize": 13,
-        "lineHeight": 1.2
+        "lineHeight": 1.15
       }
     },
-    "notes": "CV en español para candidaturas en España. Residencia en Valencia, España. Se mantienen la plantilla Rhyhorn, el formato A4, la distribución en dos páginas y las fechas originales de las certificaciones. Revisar el PDF exportado tras la importación."
+    "notes": "CV en español para candidaturas en España. Residencia en Valencia, España. Se mantienen la plantilla Rhyhorn, el formato A4, la distribución en dos páginas y las fechas originales de las certificaciones. Tipografía Inter; idiomas en tres columnas; enlaces de empresas y centros integrados en sus nombres."
   }
 }
