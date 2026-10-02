@@ -27,7 +27,7 @@
     "title": "Professional Summary",
     "columns": 1,
     "hidden": false,
-    "content": "<p>Software Engineer with 4+ years of professional experience developing Java/Spring Boot microservices and full-stack applications, with additional experience in Flutter development. Experienced in event-driven systems, Kubernetes deployments and backend team coordination, with client projects for Arval, Santé publique France and the European Patent Office. AWS Certified Solutions Architect - Associate.</p>"
+    "content": "<p>Software Engineer with 4+ years of professional experience developing Java/Spring Boot microservices and full-stack applications, with additional experience in Flutter development. Experienced in event-driven systems, Kubernetes deployments and backend team coordination, with client projects for Arval, Santé publique France and the European Patent Office. AWS Certified Solutions Architect - Associate.</p><p>Based in Valencia, Spain and open to relocation to Australia. Employer visa sponsorship required.</p>"
   },
   "sections": {
     "profiles": {
@@ -459,6 +459,6 @@
         "lineHeight": 1.15
       }
     },
-    "notes": "English-language CV for applications in Spain. Based in Valencia, Spain. Rhyhorn template, A4 format and two-page layout retained. Original certification dates retained. Inter typography; languages arranged in three columns; employer and education links placed inline."
+    "notes": "Australia application version. French citizen living in Spain; employer visa sponsorship required. MBA completion confirmed by the candidate. Completion status of the Master in Project Management has not been separately confirmed. Google Cloud Digital Leader is visible as a previously held certification, with validity ending in March 2026; update if renewed. OVH validity ends in November 2026. Rhyhorn template and two A4 pages retained; review the exported PDF after import."
   }
 }
