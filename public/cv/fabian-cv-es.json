@@ -1,6 +1,7 @@
 {
   "picture": {
     "hidden": true,
+    "fit": "cover",
     "url": "",
     "size": 100,
     "rotation": 0,
@@ -25,15 +26,21 @@
   },
   "summary": {
     "title": "Perfil profesional",
+    "icon": "",
     "columns": 1,
     "hidden": false,
+    "keepTogether": false,
+    "startOnNewPage": false,
     "content": "<p>Ingeniero de software con más de 4 años de experiencia profesional en el desarrollo de microservicios con Java y Spring Boot y aplicaciones full stack, además de proyectos con Flutter. Experiencia en sistemas orientados a eventos, despliegues en Kubernetes y coordinación de equipos backend, con proyectos para Arval, Santé publique France y la Oficina Europea de Patentes (EPO). Certificación AWS Certified Solutions Architect - Associate.</p>"
   },
   "sections": {
     "profiles": {
       "title": "GitHub",
+      "icon": "",
       "columns": 1,
       "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": [
         {
           "id": "uw14bfwv1ju526v4t7o7ergw",
@@ -44,26 +51,27 @@
           "username": "fabbo-repo",
           "website": {
             "url": "https://github.com/fabbo-repo",
-            "label": "github.com/fabbo-repo"
+            "label": "github.com/fabbo-repo",
+            "inlineLink": false
           }
         }
       ]
     },
     "experience": {
       "title": "Experiencia profesional",
+      "icon": "",
       "columns": 1,
       "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": [
         {
           "id": "ln53htc1edgbniugfwlaspz2",
           "hidden": false,
-          "options": {
-            "showLinkInTitle": true
-          },
           "company": "Sopra Steria",
           "position": "Ingeniero de software",
           "location": "",
-          "period": "May 2025 - Oct 2026",
+          "period": "May 2025 - Presente",
           "website": {
             "url": "https://www.soprasteria.es/",
             "label": "Sopra Steria",
@@ -75,9 +83,6 @@
         {
           "id": "y36j275xlx38sgzenypy1ex3",
           "hidden": false,
-          "options": {
-            "showLinkInTitle": true
-          },
           "company": "Altia",
           "position": "Ingeniero de software",
           "location": "",
@@ -94,15 +99,15 @@
     },
     "education": {
       "title": "Formación académica",
+      "icon": "",
       "columns": 1,
       "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": [
         {
           "id": "nf119n2jjpifggyahonju4yo",
           "hidden": false,
-          "options": {
-            "showLinkInTitle": true
-          },
           "school": "Universitat Politècnica de València",
           "degree": "Ingeniería Informática",
           "area": "",
@@ -119,9 +124,6 @@
         {
           "id": "kcrjjic7fqx850syzat1151u",
           "hidden": false,
-          "options": {
-            "showLinkInTitle": true
-          },
           "school": "Escuela de Negocios Europea de Barcelona",
           "degree": "Máster en Administración de Empresas (MBA)",
           "area": "",
@@ -139,14 +141,20 @@
     },
     "projects": {
       "title": "Proyectos",
+      "icon": "",
       "columns": 1,
       "hidden": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": []
     },
     "skills": {
       "title": "Competencias técnicas",
+      "icon": "",
       "columns": 1,
       "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": [
         {
           "id": "kwku7toxesz89eega7w0b9zw",
@@ -232,12 +240,17 @@
             "OpenCode"
           ]
         }
-      ]
+      ],
+      "keywordLayout": "inline",
+      "layout": "default"
     },
     "languages": {
       "title": "Idiomas",
+      "icon": "",
       "columns": 3,
       "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": [
         {
           "id": "r6v78wbnoda03zcznz70a0y7",
@@ -264,20 +277,29 @@
     },
     "interests": {
       "title": "Intereses",
+      "icon": "",
       "columns": 1,
       "hidden": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": []
     },
     "awards": {
       "title": "Premios",
+      "icon": "",
       "columns": 1,
       "hidden": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": []
     },
     "certifications": {
       "title": "Certificaciones",
+      "icon": "",
       "columns": 1,
       "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": [
         {
           "id": "u8vl7f1h5tm5ox0xf92r5are",
@@ -287,7 +309,8 @@
           "date": "Abr 2024 - Abr 2027",
           "website": {
             "url": "https://www.credly.com/badges/e8a4d5b1-60e2-497d-aa24-77ef926e5333",
-            "label": "Credly"
+            "label": "Credly",
+            "inlineLink": false
           },
           "description": ""
         },
@@ -299,7 +322,8 @@
           "date": "Nov 2023 - Nov 2026",
           "website": {
             "url": "https://partner.ovhcloud.training/Directory/Login/Login.aspx?ReturnUrl=%2fbadges%2fbadge.php%3fhash%3d78353d34901a744b12a4db1d7eb32aee9eac09f7&from=sso",
-            "label": "OVH Partner Program"
+            "label": "OVH Partner Program",
+            "inlineLink": false
           },
           "description": ""
         },
@@ -311,7 +335,8 @@
           "date": "Mar 2023 - Mar 2026",
           "website": {
             "url": "https://www.credly.com/badges/fe09439f-27b8-4256-a2a7-b293dd46dcda",
-            "label": "Credly"
+            "label": "Credly",
+            "inlineLink": false
           },
           "description": ""
         }
@@ -319,37 +344,46 @@
     },
     "publications": {
       "title": "Publicaciones",
+      "icon": "",
       "columns": 1,
       "hidden": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": []
     },
     "volunteer": {
       "title": "Voluntariado",
+      "icon": "",
       "columns": 1,
       "hidden": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": []
     },
     "references": {
       "title": "Referencias",
+      "icon": "",
       "columns": 1,
       "hidden": true,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "items": []
     }
   },
   "customSections": [
     {
       "title": "Experiencia profesional continuación",
+      "icon": "",
       "columns": 1,
       "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
       "id": "ibozgz9diye0c39y73b8v1zd",
       "type": "experience",
       "items": [
         {
           "id": "lcfxa12ywtjzv4ln6y22it6u",
           "hidden": false,
-          "options": {
-            "showLinkInTitle": true
-          },
           "company": "Capgemini",
           "position": "Desarrollador Full Stack",
           "location": "",
@@ -360,14 +394,14 @@
             "inlineLink": true
           },
           "description": "<ul><li><p>Desarrollé microservicios con Java y Spring Boot y API REST para un proyecto de seguros de Arval, utilizando Eureka y OpenFeign para integrar servicios.</p></li><li><p>Desarrollé proyectos con Flutter para Santé publique France.</p></li><li><p>Coordiné el equipo backend, revisé código y mentoricé a desarrolladores junior.</p></li><li><p>Diseñé y desplegué arquitecturas basadas en Kubernetes en AWS, Google Cloud y OVH, incluyendo tareas de operación.</p></li><li><p>Integré Keycloak para la gestión de identidades y accesos, y S3 para el almacenamiento.</p></li><li><p>Desarrollé aplicaciones frontend con React y Angular, y sitios internos de proyectos con Python y Django.</p></li></ul>",
-          "roles": []
+          "roles": [],
+          "options": {
+            "showLinkInTitle": true
+          }
         },
         {
           "id": "f2q138wvx8qhskkszld5igoa",
           "hidden": false,
-          "options": {
-            "showLinkInTitle": true
-          },
           "company": "Dialapplet",
           "position": "Desarrollador de software en prácticas",
           "location": "",
@@ -378,7 +412,10 @@
             "inlineLink": true
           },
           "description": "<ul><li><p>Desarrollé y mantuve aplicaciones C++ para soluciones de centros de llamadas en Linux con bases de datos PostgreSQL.</p></li><li><p>Participé en el desarrollo de una biblioteca Python para integrar servicios de AWS, incluido Amazon Lex.</p></li></ul>",
-          "roles": []
+          "roles": [],
+          "options": {
+            "showLinkInTitle": true
+          }
         }
       ]
     }
@@ -416,10 +453,6 @@
         }
       ]
     },
-    "css": {
-      "enabled": false,
-      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}"
-    },
     "page": {
       "gapX": 6,
       "gapY": 6,
@@ -427,7 +460,9 @@
       "marginY": 32,
       "format": "a4",
       "locale": "en-US",
-      "hideIcons": true
+      "hideLinkUnderline": false,
+      "hideIcons": true,
+      "hideSectionIcons": true
     },
     "design": {
       "level": {
@@ -459,6 +494,7 @@
         "lineHeight": 1.15
       }
     },
-    "notes": "CV en español para candidaturas en España. Residencia en Valencia, España. Se mantienen la plantilla Rhyhorn, el formato A4, la distribución en dos páginas y las fechas originales de las certificaciones. Tipografía Inter; idiomas en tres columnas; enlaces de empresas y centros integrados en sus nombres."
+    "notes": "CV en español para candidaturas en España. Residencia en Valencia, España. Se mantienen la plantilla Rhyhorn, el formato A4, la distribución en dos páginas y las fechas originales de las certificaciones. Tipografía Inter; idiomas en tres columnas; enlaces de empresas y centros integrados en sus nombres.",
+    "styleRules": []
   }
 }
