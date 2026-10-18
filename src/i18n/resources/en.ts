@@ -39,10 +39,15 @@ export const en = {
       },
     },
     projects: {
-      label: "Seven projects",
+      label: "Eight projects",
       title: "Things I've made",
       viewProject: "View",
       items: {
+        openSkyFinance: {
+          title: "Open Sky Finance",
+          description:
+            "Free and open-source personal finance app with no limits and no network access, everything stays on your device.",
+        },
         copeo: {
           title: "Copeo",
           description:

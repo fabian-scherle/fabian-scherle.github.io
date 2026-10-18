@@ -1,5 +1,13 @@
 export const projects = [
   {
+    id: "openSkyFinance",
+    title: "Open Sky Finance",
+    image:
+      "https://raw.githubusercontent.com/ravens-forge/open-sky-finance/main/assets/branding/logo-light.svg",
+    link: "https://github.com/ravens-forge/open-sky-finance/blob/main/README.md",
+    technologies: ["Flutter", "Drift", "Riverpod"],
+  },
+  {
     id: "copeo",
     title: "Copeo",
     image:
