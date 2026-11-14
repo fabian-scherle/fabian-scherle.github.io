@@ -6,7 +6,7 @@ Valencia | +34 677 16 96 87 | fabianscherle99@gmail.com | [linkedin.com/in/fabia
 
 ## Resumen
 
-Ingeniero de software backend con casi 5 años de experiencia en microservicios con Java y Spring Boot. Experiencia en servicios transaccionales (wallet, liquidación y cash-out) para una plataforma de apuestas con mucho tráfico, y en sistemas para la Oficina Europea de Patentes y un grupo de renting de vehículos. Arquitecturas orientadas a eventos con Kafka, Kubernetes en AWS, GCP y OVH, y GitOps con ArgoCD. Un año liderando un equipo backend de 3 personas. AWS Certified Solutions Architect - Associate.
+Ingeniero de software con casi 5 años de experiencia en microservicios con Java y Spring Boot. Experiencia en servicios transaccionales (wallet, liquidación y cash-out) para una plataforma de apuestas con mucho tráfico, y en sistemas para la Oficina Europea de Patentes y un grupo de renting de vehículos. Arquitecturas orientadas a eventos con Kafka, Kubernetes en AWS, GCP y OVH, y GitOps con ArgoCD. Un año liderando un equipo backend de 3 personas. AWS Certified Solutions Architect - Associate.
 
 ## Habilidades técnicas
 
