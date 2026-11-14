@@ -1,6 +1,6 @@
 # Fabián Scherle Carboneres
 
-**Backend Software Engineer | Java, Spring Boot, Kafka, AWS**
+**Software Engineer | Java, Spring Boot, Kafka, AWS**
 
 Valencia, Spain | Relocating to Australia
 
@@ -10,7 +10,7 @@ Spanish and French citizen | Requires employer visa sponsorship
 
 ## Summary
 
-Backend software engineer with almost 5 years of experience in Java and Spring Boot microservices. Experience with real-money transactional services (wallet, settlement, cash-out) on a high-traffic online wagering platform, as well as systems for the European Patent Office and a car leasing group. Event-driven design with Kafka, Kubernetes on AWS, GCP and OVH, and GitOps with ArgoCD. Led a backend team of 3 for a year. AWS Certified Solutions Architect - Associate.
+Software engineer with almost 5 years of experience in Java and Spring Boot microservices. Experience with real-money transactional services (wallet, settlement, cash-out) on a high-traffic online wagering platform, as well as systems for the European Patent Office and a car leasing group. Event-driven design with Kafka, Kubernetes on AWS, GCP and OVH, and GitOps with ArgoCD. Led a backend team of 3 for a year. AWS Certified Solutions Architect - Associate.
 
 ## Technical Skills
 
