@@ -39,7 +39,7 @@ export const ContactSection: React.FC = () => {
               {t("contact.github")}
             </a>
             <a
-              href="https://www.linkedin.com/in/fabián-scherle-carboneres-5ba3831b5/"
+              href="https://www.linkedin.com/in/fabian-scherle"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => logFirebaseAnalyticsEvent("go-linkeding")}

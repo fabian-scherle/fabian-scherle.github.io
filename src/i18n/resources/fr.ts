@@ -3,13 +3,11 @@ export const fr = {
     header: {
       expertise: "Expertise",
       work: "Projets",
-      experience: "Expérience",
       contact: "Contact",
     },
     hero: {
       role: "Ingénieur Logiciel · Valencia, Espagne",
       lead: "Je travaille sur des microservices dans des environnements cloud-native, surtout côté backend avec Spring Boot et Python, et côté frontend aussi quand le projet le demande. Ce qui compte pour moi, c'est de construire des choses qui restent fiables et faciles à maintenir.",
-      downloadCV: "Télécharger le CV",
       portraitAlt: "Fabián Scherle, ingénieur logiciel à Valencia",
     },
     about: {
@@ -19,12 +17,12 @@ export const fr = {
         development: {
           title: "Développement Logiciel",
           description:
-            "Services en Java et Spring Boot, APIs REST et intégrations entre microservices, avec des clients Angular, React et Flutter de l'autre côté.",
+            "Services en Java et Spring Boot, APIs REST et intégrations entre microservices, avec des clients Angular, React et Flutter de l'autre côté. Couverts par des tests d'intégration et end-to-end écrits avec la fonctionnalité, pas après.",
         },
         cloud: {
           title: "Cloud et Systèmes Distribués",
           description:
-            "Clusters Kubernetes et pipelines ArgoCD, services orientés événements sur Kafka et RabbitMQ, déployés sur AWS, Google Cloud et OVH.",
+            "Clusters Kubernetes et pipelines ArgoCD, services orientés événements sur Kafka, déployés sur AWS, Google Cloud et OVH, avec Prometheus et Grafana pour voir ce qu'ils font vraiment.",
         },
         data: {
           title: "Données et Sécurité",
@@ -82,36 +80,6 @@ export const fr = {
           title: "OpenSHS Improvement",
           description:
             "De nouveaux mécanismes d'interaction pour Open Smart Home Simulator, pour générer des données simulées facilement.",
-        },
-      },
-    },
-    experience: {
-      label: "Expérience",
-      title: "Où j'ai travaillé",
-      items: {
-        sopraSteria: {
-          period: "Depuis 2025",
-          role: "Ingénieur Logiciel",
-          description:
-            "Microservices dans le domaine financier des plateformes de paris sportifs, dans des environnements à forte concurrence et critiques. Spring Boot avec Python et FastAPI, messagerie Kafka et RabbitMQ, clients Angular et React, livrés avec ArgoCD sur Kubernetes.",
-        },
-        altia: {
-          period: "2024 à 2025",
-          role: "Ingénieur Logiciel",
-          description:
-            "Systèmes distribués et orientés événements au sein de l'infrastructure à grande échelle de l'Office Européen des Brevets, avec Spring Boot et Apache Kafka sur Kubernetes, en collaboration avec plusieurs équipes.",
-        },
-        capgemini: {
-          period: "2022 à 2024",
-          role: "Développeur Full Stack",
-          description:
-            "Microservices et cloud, de la conception technique jusqu'à l'exploitation. J'ai dirigé l'équipe backend, mené les revues de code et accompagné les juniors, et conçu des architectures Kubernetes avec Keycloak, S3, AWS, GCP et OVH.",
-        },
-        dialapplet: {
-          period: "2021",
-          role: "Stagiaire Développeur Logiciel",
-          description:
-            "Applications C++ sous Linux avec PostgreSQL, ainsi qu'une bibliothèque Python pour consommer des services AWS comme Amazon Lex.",
         },
       },
     },

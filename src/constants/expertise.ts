@@ -8,6 +8,7 @@ export const expertise = [
     id: "development",
     keywords: [
       "Java",
+      "Kotlin",
       "Spring Boot",
       "REST APIs",
       "TypeScript",
@@ -17,6 +18,10 @@ export const expertise = [
       "Python",
       "FastAPI",
       "Django",
+      "JUnit",
+      "Mockito",
+      "Testcontainers",
+      "Playwright",
     ],
   },
   {
@@ -24,13 +29,15 @@ export const expertise = [
     keywords: [
       "Kubernetes",
       "Docker",
+      "Helm",
       "ArgoCD",
       "CI/CD",
       "AWS",
       "Google Cloud",
       "OVH Cloud",
       "Apache Kafka",
-      "RabbitMQ",
+      "Prometheus",
+      "Grafana",
     ],
   },
   {
@@ -46,6 +53,7 @@ export const expertise = [
   {
     id: "ai",
     keywords: [
+      "Claude Code",
       "OpenCode",
       "AI Coding Agents",
       "GitHub Copilot",

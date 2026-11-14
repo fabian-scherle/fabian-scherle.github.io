@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import "./nav-links-layout.css";
 
 /** Page order, so the underline tracks the scroll rather than fighting it. */
-const SECTION_IDS = ["expertise", "work", "experience", "contact"];
+const SECTION_IDS = ["expertise", "work", "contact"];
 
 export const NavLinksLayout: React.FC = () => {
   const { t } = useTranslation();

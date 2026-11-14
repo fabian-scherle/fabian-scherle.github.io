@@ -3,13 +3,11 @@ export const en = {
     header: {
       expertise: "Expertise",
       work: "Work",
-      experience: "Experience",
       contact: "Contact",
     },
     hero: {
       role: "Software Engineer · Valencia, Spain",
       lead: "I work on microservices in cloud-native environments, mostly on the backend with Spring Boot and Python, and on the frontend too when a project calls for it. I care about building things that stay reliable and easy to maintain.",
-      downloadCV: "Download CV",
       portraitAlt: "Fabián Scherle, software engineer based in Valencia",
     },
     about: {
@@ -19,12 +17,12 @@ export const en = {
         development: {
           title: "Software Development",
           description:
-            "Java and Spring Boot services, REST APIs and integrations across microservice boundaries, with Angular, React and Flutter clients on the other side of them.",
+            "Java and Spring Boot services, REST APIs and integrations across microservice boundaries, with Angular, React and Flutter clients on the other side of them. Covered by integration and end-to-end tests written alongside the feature, not after it.",
         },
         cloud: {
           title: "Cloud and Distributed Systems",
           description:
-            "Kubernetes clusters and ArgoCD pipelines, event-driven services over Kafka and RabbitMQ, running on AWS, Google Cloud and OVH.",
+            "Kubernetes clusters and ArgoCD pipelines, event-driven services over Kafka, running on AWS, Google Cloud and OVH, with Prometheus and Grafana to see what they are actually doing.",
         },
         data: {
           title: "Data and Security",
@@ -82,36 +80,6 @@ export const en = {
           title: "OpenSHS Improvement",
           description:
             "New interaction mechanisms for the Open Smart Home Simulator, for generating simulated data easily.",
-        },
-      },
-    },
-    experience: {
-      label: "Experience",
-      title: "Where I've worked",
-      items: {
-        sopraSteria: {
-          period: "Since 2025",
-          role: "Software Engineer",
-          description:
-            "Microservices in the financial domain of sports-betting platforms, in high-concurrency and mission-critical environments. Spring Boot with Python and FastAPI, Kafka and RabbitMQ messaging, Angular and React clients, delivered with ArgoCD on Kubernetes.",
-        },
-        altia: {
-          period: "2024 to 2025",
-          role: "Software Engineer",
-          description:
-            "Distributed, event-driven systems inside the European Patent Office's large-scale infrastructure, built with Spring Boot and Apache Kafka on Kubernetes across several teams.",
-        },
-        capgemini: {
-          period: "2022 to 2024",
-          role: "Full Stack Developer",
-          description:
-            "Microservices and cloud from technical design through to operation. Led the backend team, ran code reviews and mentored juniors, and designed Kubernetes architectures with Keycloak, S3, AWS, GCP and OVH.",
-        },
-        dialapplet: {
-          period: "2021",
-          role: "Software Developer Intern",
-          description:
-            "C++ applications on Linux with PostgreSQL, plus a Python library for consuming AWS services such as Amazon Lex.",
         },
       },
     },

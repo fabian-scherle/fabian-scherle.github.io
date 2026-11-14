@@ -9,7 +9,7 @@ interface MobileMenuProps {
   onClose: () => void;
 }
 
-const SECTION_IDS = ["expertise", "work", "experience", "contact"];
+const SECTION_IDS = ["expertise", "work", "contact"];
 
 export const MobileMenu: React.FC<MobileMenuProps> = ({
   isOpen,
