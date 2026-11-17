@@ -170,15 +170,13 @@ IndexLayout
 
 - `src/i18n/config.ts` configures `i18next` with browser language detection and a
   fallback of `en`.
-- Namespaces: `header`, `hero`, `about`, `projects`, `experience`, `contact`.
+- Namespaces: `header`, `hero`, `about`, `projects`, `contact`.
 - List content is looked up by id: `t(\`about.areas.\${area.id}.title\`)`,
-  `t(\`experience.items.\${role.id}.period\`)`,
   `t(\`projects.items.\${project.id}.title\`)`. Adding an entry needs both a
   constants entry **and** matching keys in all three locale files.
 - Periods are translated strings ("Since 2025" / "Desde 2025" / "Depuis 2025")
   rather than formatted dates, so each locale reads naturally.
 - **No em dashes in copy**, by preference. Ranges read "2022 to 2024".
-- CV file naming mirrors the language code: `/cv/fabian-cv-{en,es,fr}.pdf`.
 
 ## SEO & metadata
 

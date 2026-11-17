@@ -7,12 +7,7 @@ import { logFirebaseAnalyticsEvent } from "../../../utils/firebase-analytics-uti
 const EMAIL = "fabianscherle99@gmail.com";
 
 export const ContactSection: React.FC = () => {
-  const { t, i18n } = useTranslation();
-
-  const getCVPath = () => {
-    logFirebaseAnalyticsEvent("download-cv-" + i18n.language.substring(0, 2));
-    return `/cv/fabian-cv-${i18n.language.substring(0, 2)}.pdf`;
-  };
+  const { t } = useTranslation();
 
   return (
     <footer id="contact" className="contact-section">
@@ -45,9 +40,6 @@ export const ContactSection: React.FC = () => {
               onClick={() => logFirebaseAnalyticsEvent("go-linkeding")}
             >
               LinkedIn
-            </a>
-            <a href={getCVPath()} download>
-              {t("contact.downloadCV")}
             </a>
           </div>
         </div>

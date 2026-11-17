@@ -87,7 +87,6 @@ export const en = {
       label: "Contact",
       title: "Get in touch.",
       github: "fabbo-repo on GitHub",
-      downloadCV: "Download CV (PDF)",
       location: "Valencia, Spain",
     },
   },
